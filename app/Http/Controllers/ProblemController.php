@@ -13,7 +13,7 @@ function GetAverage($column, $problems)
     foreach ($array as $item) {
         $sum += $item;
     }
-    if(count($array) == 0 || $sum == 0){
+    if (count($array) == 0 || $sum == 0) {
         return 0;
     }
     return round($sum / count($array));
@@ -143,8 +143,14 @@ class ProblemController extends Controller
             'url' => ['required', 'url']
 
         ]);
-        auth()->user()->problems()->where('id',$problem->id)->update($data);
+        auth()->user()->problems()->where('id', $problem->id)->update($data);
         return redirect('/problem/' . $problem->id);
+    }
+
+    function destroy(Problem $problem)
+    {
+        $problem->delete();
+        return Redirect::back();
     }
 
 }

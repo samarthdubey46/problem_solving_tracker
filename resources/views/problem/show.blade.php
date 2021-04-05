@@ -1,5 +1,19 @@
 @extends('layouts.app')
 @section('options-nav')
+    <style>
+        button {
+            background: none;
+            border: none;
+            padding: 0;
+        }
+    </style>
+    <form action="/problem/{{$problem['id']}}" method="post">
+        @csrf
+        @method('DELETE')
+        <li class="nav-item" style="top:5px">
+            <button type="submit" style="color: red;background: white" class="nav-link">Delete</button>
+        </li>
+    </form>
     <li class="nav-item" style="top:5px">
         <a class="nav-link" href="/problem/{{$problem['id']}}/edit">Edit</a>
     </li>
