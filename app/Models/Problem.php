@@ -23,9 +23,14 @@ class Problem extends Model
         'byYourself',
         'Category',
         'url',
-        'name'
+        'name',
+        'code',
+        'codeForcesLevel',
+        'juniorSheetCode',
     ];
-    public function user(){
+
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 }

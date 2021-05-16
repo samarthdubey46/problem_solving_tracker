@@ -26,7 +26,8 @@
                         <p class="mb-1">Category : <b>{{$problem['Category']}}</b></p>
                         <p class="mb-1">Status : <b>{{$problem['Status']}}</b></p>
                         <p class="mb-1">By Yourself : <b>{{$problem['byYourself']}}</b></p>
-                        <a href="{{$problem['url']}}">{{$problem['url']}}</a>
+                        <p class="mb-1">Submit Count : <b>{{$problem['submitCount']}}</b></p>
+                        <a target="_blank" href="{{$problem['url']}}">{{$problem['url']}}</a>
 
                     </div>
 

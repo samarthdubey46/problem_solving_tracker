@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\juniorSheet;
 use App\Http\Controllers\ProblemController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -22,6 +23,8 @@ Auth::routes();
 Route::get('/', [ProblemController::class,'home'])->name('home');
 Route::get('/user/edit', [UserController::class,'edit'])->name('user.edit');
 Route::patch('/user', [UserController::class,'update'])->name('user.update');
+Route::get('/user/{username}', [UserController::class,'show'])->name('user.show');
+Route::get('/user/{user}/id', [UserController::class,'showId'])->name('user.showID');
 
 Route::get('/calender',[ProblemController::class,'calender'])->name('calender');
 Route::get('/problem/create',[ProblemController::class,'create'])->name('create');
@@ -32,4 +35,6 @@ Route::patch('/problem/{problem}',[ProblemController::class,'update']);
 Route::get('/problem/{problem}',[ProblemController::class,'show']);
 Route::get('/date/{date}',[ProblemController::class,'show_with_date'])->name('date');
 Route::delete('/problem/{problem}', [ProblemController::class,'destroy'])->name('user.delete');
+
+Route::get('/junior/level/',[juniorSheet::class,'juniorSheet']);
 

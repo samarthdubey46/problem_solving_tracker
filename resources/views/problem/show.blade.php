@@ -42,8 +42,9 @@
                 <p class="mb-1">Status : <b>{{$problem['Status']}}</b></p>
                 <p class="mb-1">By Yourself : <b>{{$problem['byYourself']}}</b></p>
                 <p class="mb-1">Category : <b>{{$problem['Category']}}</b></p>
+                <p class="mb-1">Problem Class : <b>{{$problem['codeForcesLevel']}}</b></p>
 
-                <a href="{{$problem['url']}}">{{$problem['url']}}</a>
+                <a target="_blank" href="{{$problem['url']}}">{{$problem['url']}}</a>
 
             </div>
 

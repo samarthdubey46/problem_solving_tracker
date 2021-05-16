@@ -25,6 +25,9 @@
         "sass-loader": "^8.0.0"
     },
     "dependencies": {
-        "react-circular-progressbar": "^2.0.4"
+        "install": "^0.13.0",
+        "npm": "^7.8.0",
+        "react-circular-progressbar": "^2.0.4",
+        "request-interval": "^2.0.0"
     }
 }

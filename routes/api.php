@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\juniorSheet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -13,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+//Route::get('/codeforces_problem',[juniorSheet::class,'getProblemsSolved']);
+Route::get('/all_problems/{email}',[juniorSheet::class,'juniorSheetApi']);
+Route::get('/codeforces_problem/{username}',[juniorSheet::class,'getProblemsSolved']);
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

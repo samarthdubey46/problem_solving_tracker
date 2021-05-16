@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <style>
+        body {
+            background: #FFFFFF;
+            background: -webkit-linear-gradient(to right, #ff7e5f, #feb47b);
+            background: linear-gradient(to right, #55c2e5, #abe9cd);
+        }
+    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -19,13 +26,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <style>
-        body {
-            background: #FFFFFF;
-            background: -webkit-linear-gradient(to right, #ff7e5f, #feb47b);
-            background: linear-gradient(to right, #55c2e5, #abe9cd);
-        }
-    </style>
+
 </head>
 <body>
 <div id="app">
@@ -74,30 +75,37 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/user/edit">
-                                Edit Account
+                            <a class="dropdown-item" href="/junior/level/A">
+                                A
                             </a>
-                            <a class="dropdown-item" target="_blank"
-                               href="https://codeforces.com/profile/{{auth()->user()->codeforces_username}}">
-                                CodeForces
+                            <a class="dropdown-item" href="/junior/level/B">
+                                B
                             </a>
-                            <a target="_blank" class="dropdown-item"
-                               href="https://codeforcesladders.firebaseapp.com/?handle={{auth()->user()->codeforces_username}}
-                                   ">
-                                CodeForces Ladder
+                            <a class="dropdown-item" href="/junior/level/C1">
+                                C1
                             </a>
-                            <a class="dropdown-item"
-                               href="/junior/level/">
-                                Junior Sheet
+                            <a class="dropdown-item" href="/junior/level/C2">
+                                C2
                             </a>
-
-                            <a class="dropdown-item" href="/problem/list">
-                                All Problems
+                            <a class="dropdown-item" href="/junior/level/D1">
+                                D1
+                            </a>
+                            <a class="dropdown-item" href="/junior/level/D2">
+                                D2
                             </a>
 
-                            <a class="dropdown-item" href="/calender">
-                                Calender
-                            </a>
+                            {{--                            <a class="dropdown-item" target="_blank"--}}
+                            {{--                               href="https://codeforces.com/profile/{{auth()->user()->codeforces_username}}">--}}
+                            {{--                                CodeForces--}}
+                            {{--                            </a>--}}
+                            {{--                            <a target="_blank" class="dropdown-item"--}}
+                            {{--                               href="https://codeforcesladders.firebaseapp.com/?handle={{auth()->user()->codeforces_username}}--}}
+                            {{--                                   ">--}}
+                            {{--                                CodeForces Ladder--}}
+                            {{--                            </a>--}}
+                            {{--                            <a class="dropdown-item" href="/problem/list">--}}
+                            {{--                                All Problems--}}
+                            {{--                            </a>--}}
                             <a class="dropdown-item" href="/problem/create">
                                 Add Problem
                             </a>
@@ -113,7 +121,6 @@
                         </div>
                     </li>
                     @endguest
-
                 </ul>
             </div>
         </div>

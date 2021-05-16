@@ -1,6 +1,17 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/@babel/runtime/regenerator/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
+
+
+/***/ }),
+
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -1912,9 +1923,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./data */ "./resources/js/components/data.js");
+/* harmony import */ var _Nav_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Nav.css */ "./resources/js/components/Nav.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -1931,20 +1958,5259 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-function TotalCompleted() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(new Date()),
-      _useState2 = _slicedToArray(_useState, 2),
-      value = _useState2[0],
-      onChange = _useState2[1];
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {});
+
+
+function TotalCompleted() {
+  var api_url = 'http://127.0.0.1:8000/api/';
+  var username = 'samarthdubey46';
+  var obj = {
+    'A': _data__WEBPACK_IMPORTED_MODULE_3__.A,
+    'B': _data__WEBPACK_IMPORTED_MODULE_3__.B,
+    'C1': _data__WEBPACK_IMPORTED_MODULE_3__.C1,
+    'C2': _data__WEBPACK_IMPORTED_MODULE_3__.C2,
+    'D1': _data__WEBPACK_IMPORTED_MODULE_3__.D1,
+    'D2': _data__WEBPACK_IMPORTED_MODULE_3__.D2
+  };
+  var email = 'samarthdubey46@gmail.com';
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('A'),
+      _useState2 = _slicedToArray(_useState, 2),
+      active = _useState2[0],
+      setactive = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({}),
+      _useState4 = _slicedToArray(_useState3, 2),
+      codeForcesList = _useState4[0],
+      setcodeForcesList = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({}),
+      _useState6 = _slicedToArray(_useState5, 2),
+      JuniorSheetData = _useState6[0],
+      setJuniorSheetData = _useState6[1];
+
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({}),
+      _useState8 = _slicedToArray(_useState7, 2),
+      allCompleted = _useState8[0],
+      setallCompleted = _useState8[1];
+
+  var GetRequest = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(url) {
+      var res, json;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              console.log('start');
+              _context.next = 3;
+              return fetch(url, {
+                method: 'GET'
+              });
+
+            case 3:
+              res = _context.sent;
+              _context.next = 6;
+              return res.json();
+
+            case 6:
+              json = _context.sent;
+              return _context.abrupt("return", json);
+
+            case 8:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+
+    return function GetRequest(_x) {
+      return _ref.apply(this, arguments);
+    };
+  }();
+
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+      var url_code, url_all, codeforcesList, all_problems, arr;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              url_code = api_url + "codeforces_problem/".concat(username);
+              url_all = api_url + "all_problems/".concat(email);
+              _context2.next = 4;
+              return GetRequest(url_code);
+
+            case 4:
+              codeforcesList = _context2.sent;
+              _context2.next = 7;
+              return GetRequest(url_all);
+
+            case 7:
+              all_problems = _context2.sent;
+              arr = {};
+
+              if (all_problems !== null) {
+                setJuniorSheetData(all_problems);
+                arr = _objectSpread({}, all_problems);
+              }
+
+              if (codeforcesList !== null) {
+                setcodeForcesList(codeforcesList);
+                arr = _objectSpread(_objectSpread({}, arr), codeforcesList);
+              }
+
+              setallCompleted(arr);
+
+            case 12:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }))();
+  }, []);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    className: "container",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("nav", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("ul", {
+          className: "pagination",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
+            id: "A",
+            className: active === 'A' ? 'page-item cursor active' : 'page-item cursor',
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+              onClick: function onClick() {
+                return setactive('A');
+              },
+              className: "page-link",
+              children: "A"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
+            id: "B",
+            className: active === 'B' ? 'page-item cursor active' : 'page-item cursor',
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+              onClick: function onClick() {
+                return setactive('B');
+              },
+              className: "page-link",
+              children: "B"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
+            id: "C1",
+            className: active === 'C1' ? 'page-item cursor active' : 'page-item cursor',
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+              onClick: function onClick() {
+                return setactive('C1');
+              },
+              className: "page-link",
+              children: "C1"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
+            id: "C2",
+            className: active === 'C2' ? 'page-item cursor active' : 'page-item cursor',
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+              onClick: function onClick() {
+                return setactive('C2');
+              },
+              className: "page-link",
+              children: "C2"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
+            id: "D1",
+            className: active === 'D1' ? 'page-item cursor active' : 'page-item cursor',
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+              onClick: function onClick() {
+                return setactive('D1');
+              },
+              className: "page-link",
+              children: "D1"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
+            id: "D2",
+            className: active === 'D2' ? 'page-item cursor active' : 'page-item cursor',
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+              onClick: function onClick() {
+                return setactive('D2');
+              },
+              className: "page-link",
+              children: "D2"
+            })
+          })]
+        })
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("table", {
+      className: "table",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("thead", {
+        className: "thead-dark",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("tr", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+            scope: "col",
+            children: "id"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+            scope: "col",
+            children: "Name"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+            scope: "col",
+            children: "Level"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+            scope: "col",
+            children: "Verdict"
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("tbody", {
+        children: obj[active].map(function (item, index) {
+          var status = '-';
+          var color = 'white';
+          var text_color = 'black';
+          var key = [item['code'] + item['level']];
+          var a_color = '#0275d8';
+          var url = item['url'];
+          var target = '_blank';
+
+          if (allCompleted[key] !== null && allCompleted[key] !== undefined) {
+            status = allCompleted[key]['status'] === 'OK' ? 'Accepted' : allCompleted[key]['status'];
+
+            if (status === 'Accepted') {
+              color = '#5AA900FF';
+              text_color = 'white';
+              a_color = 'white';
+            } else {
+              color = '#d30513';
+              text_color = 'white';
+              a_color = 'white';
+            }
+          }
+
+          if (JuniorSheetData[key] !== null && JuniorSheetData[key] !== undefined) {
+            url = "/problem/".concat(JuniorSheetData[key]['id']);
+            target = '';
+          }
+
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("tr", {
+            id: index,
+            style: {
+              backgroundColor: color
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("th", {
+              style: {
+                color: text_color
+              },
+              scope: "row",
+              children: item['id']
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("td", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+                style: {
+                  color: a_color
+                },
+                href: url,
+                target: target,
+                children: item['Name']
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("td", {
+              style: {
+                color: text_color
+              },
+              children: item['level']
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("td", {
+              style: {
+                color: text_color
+              },
+              children: status
+            })]
+          });
+        })
+      })]
+    })]
+  });
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TotalCompleted);
 
-if (document.getElementById('calender')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(TotalCompleted, {}), document.getElementById('calender'));
-}
+if (document.getElementById('junior')) {
+  react_dom__WEBPACK_IMPORTED_MODULE_2__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(TotalCompleted, {}), document.getElementById('junior'));
+} // </div>
+
+/***/ }),
+
+/***/ "./resources/js/components/data.js":
+/*!*****************************************!*\
+  !*** ./resources/js/components/data.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "D2": () => (/* binding */ D2),
+/* harmony export */   "D1": () => (/* binding */ D1),
+/* harmony export */   "C2": () => (/* binding */ C2),
+/* harmony export */   "C1": () => (/* binding */ C1),
+/* harmony export */   "B": () => (/* binding */ B),
+/* harmony export */   "A": () => (/* binding */ A)
+/* harmony export */ });
+var D2 = [{
+  'id': 1,
+  'Name': 'Oulipo',
+  'code': 'PKU 3461',
+  'level': 'D',
+  'url': 'http://poj.org/problem?id=3461'
+}, {
+  'id': 2,
+  'Name': 'A Needle in the Haystack',
+  'code': 'SPOJ NHAY',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/NHAY'
+}, {
+  'id': 3,
+  'Name': 'Finding the Tesserect',
+  'code': 'SPOJ TESSER',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/TESSER/'
+}, {
+  'id': 4,
+  'Name': 'Period',
+  'code': 'SPOJ PERIOD',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/PERIOD/'
+}, {
+  'id': 5,
+  'Name': 'Prefixes and Suffixes',
+  'code': '432',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/432/problem/D'
+}, {
+  'id': 6,
+  'Name': 'Tavas and Malekas',
+  'code': '535',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/535/problem/D'
+}, {
+  'id': 7,
+  'Name': 'Be Efficient',
+  'code': 'UVA 11155',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2096'
+}, {
+  'id': 8,
+  'Name': 'Vertex Cover',
+  'code': 'SPOJ PT07X',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/PT07X/'
+}, {
+  'id': 9,
+  'Name': 'First Digit Law',
+  'code': '54',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/54/problem/C'
+}, {
+  'id': 10,
+  'Name': 'Robin Hood',
+  'code': '672',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/672/problem/D'
+}, {
+  'id': 11,
+  'Name': 'End of Exams',
+  'code': '94',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/94/problem/D'
+}, {
+  'id': 12,
+  'Name': 'Equivalent Strings',
+  'code': '560',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/560/problem/D'
+}, {
+  'id': 13,
+  'Name': 'Count Good Substrings',
+  'code': '451',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/451/problem/D'
+}, {
+  'id': 14,
+  'Name': 'Mushroom Scientists',
+  'code': '186',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/186/problem/D'
+}, {
+  'id': 15,
+  'Name': 'Analyzing Polyline',
+  'code': '195',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/195/problem/D'
+}, {
+  'id': 16,
+  'Name': 'Bear and Prime 100',
+  'code': '680',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/680/problem/C'
+}, {
+  'id': 17,
+  'Name': 'Team',
+  'code': '401',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/401/problem/C'
+}, {
+  'id': 18,
+  'Name': 'Bachets Game',
+  'code': 'UVA 10404',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1345'
+}, {
+  'id': 19,
+  'Name': '=HYPERLINK("https://community.topcoder.com/stat?c=problem_statement&pm=11791&rd=14727","EllysCheckers")',
+  'code': '',
+  'level': 'D',
+  'url': 'SRM534-D1-250'
+}, {
+  'id': 20,
+  'Name': '=HYPERLINK("https://community.topcoder.com/stat?c=problem_statement&pm=11566&rd=14547","RowAndCoins")',
+  'code': '',
+  'level': 'D',
+  'url': 'SRM522-D1-250'
+}, {
+  'id': 21,
+  'Name': '=HYPERLINK("https://community.topcoder.com/stat?c=problem_statement&pm=3491&rd=6517","BagsOfGold")',
+  'code': '',
+  'level': 'D',
+  'url': 'SRM228-D1-500'
+}, {
+  'id': 22,
+  'Name': 'Bag of mice',
+  'code': '148',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/148/problem/D'
+}, {
+  'id': 23,
+  'Name': 'MELE3',
+  'code': 'SPOJ MELE3',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/MELE3/'
+}, {
+  'id': 24,
+  'Name': 'Roads',
+  'code': 'SPOJ ROADS',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/ROADS/en/'
+}, {
+  'id': 25,
+  'Name': 'The Tree Root',
+  'code': 'UVA 10459',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1400'
+}, {
+  'id': 26,
+  'Name': 'SKYLINE',
+  'code': 'UVA 1232',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3673'
+}, {
+  'id': 27,
+  'Name': 'Ordering the Soldiers',
+  'code': 'SPOJ ORDERS',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/ORDERS/'
+}, {
+  'id': 28,
+  'Name': 'Playlist',
+  'code': '268',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/268/problem/E'
+}, {
+  'id': 29,
+  'Name': 'Little Girl and Maximum XOR',
+  'code': '276',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/276/problem/D'
+}, {
+  'id': 30,
+  'Name': 'Two Strings',
+  'code': '224',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/224/problem/D'
+}, {
+  'id': 31,
+  'Name': 'Big Maximum Sum',
+  'code': '75',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/75/problem/D'
+}, {
+  'id': 32,
+  'Name': 'Football Championship',
+  'code': '200',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/200/problem/C'
+}, {
+  'id': 33,
+  'Name': 'Given Length and Sum of Digits...',
+  'code': '489',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/489/problem/C'
+}, {
+  'id': 34,
+  'Name': 'Trip Routing',
+  'code': 'UVA 186',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=122'
+}, {
+  'id': 35,
+  'Name': 'Scheduling Lectures',
+  'code': 'UVA 607',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=548'
+}, {
+  'id': 36,
+  'Name': 'Weird Function',
+  'code': 'SPOJ WEIRDFN',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/WEIRDFN/'
+}, {
+  'id': 37,
+  'Name': 'The ? 1 ? 2 ? ... ? n = k problem',
+  'code': 'UVA 10025',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=966'
+}, {
+  'id': 38,
+  'Name': 'Dictionary Subsequences',
+  'code': 'SPOJ DICTSUB',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/DICTSUB/'
+}, {
+  'id': 39,
+  'Name': 'Jimmis Riddles',
+  'code': 'UVA 10058',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=999'
+}, {
+  'id': 40,
+  'Name': 'Friends and Subsequences',
+  'code': '689',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/689/problem/D'
+}, {
+  'id': 41,
+  'Name': 'Sum of Squares with Segment Tree',
+  'code': 'SPOJ SEGSQRSS',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/SEGSQRSS'
+}, {
+  'id': 42,
+  'Name': 'Travel in Desert',
+  'code': 'UVA 10816',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1757'
+}, {
+  'id': 43,
+  'Name': 'Almost Union-Find',
+  'code': '',
+  'level': 'D',
+  'url': 'UVA 11987'
+}, {
+  'id': 44,
+  'Name': 'Cow Program',
+  'code': '284',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/284/problem/D'
+}, {
+  'id': 45,
+  'Name': 'Random Task',
+  'code': '431',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/431/problem/D'
+}, {
+  'id': 46,
+  'Name': 'Greg and Graph',
+  'code': '296',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/296/problem/D'
+}, {
+  'id': 47,
+  'Name': 'Russian Roulette',
+  'code': '104',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/104/problem/D'
+}, {
+  'id': 48,
+  'Name': 'Bicycle Race',
+  'code': '659',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/659/problem/D'
+}, {
+  'id': 49,
+  'Name': 'Greenhouse Effect',
+  'code': '270',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/270/problem/D'
+}, {
+  'id': 50,
+  'Name': 'Pocket Book',
+  'code': '152',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/152/problem/C'
+}, {
+  'id': 51,
+  'Name': 'Levko and Array Recovery',
+  'code': '361',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/361/problem/C'
+}, {
+  'id': 52,
+  'Name': 'Ice Cave',
+  'code': '540',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/540/problem/C'
+}, {
+  'id': 53,
+  'Name': 'Robbery',
+  'code': 'UVA 707',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=648'
+}, {
+  'id': 54,
+  'Name': 'The Errant Physicist',
+  'code': 'UVA 126',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=62'
+}, {
+  'id': 55,
+  'Name': 'Brackets sequence',
+  'code': 'UVA 1626',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4501'
+}, {
+  'id': 56,
+  'Name': 'Unique World',
+  'code': 'UVA 10448',
+  'level': 'D',
+  'url': 'https://www.youtube.com/watch?v=OWlJ8chpit0'
+}, {
+  'id': 57,
+  'Name': 'Bad Luck Island',
+  'code': '540',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/540/problem/D'
+}, {
+  'id': 58,
+  'Name': 'Shopping Trip',
+  'code': '',
+  'level': 'D',
+  'url': 'UVA 11284'
+}, {
+  'id': 59,
+  'Name': 'Hotel booking',
+  'code': '',
+  'level': 'D',
+  'url': 'UVA 11635'
+}, {
+  'id': 60,
+  'Name': 'Hit Ball',
+  'code': '203',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/203/problem/D'
+}, {
+  'id': 61,
+  'Name': 'Sereja ans Anagrams',
+  'code': '368',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/368/problem/D'
+}, {
+  'id': 62,
+  'Name': 'Choosing Capital for Treeland',
+  'code': '219',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/219/problem/D'
+}, {
+  'id': 63,
+  'Name': 'Coloring Brackets',
+  'code': '149',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/149/problem/D'
+}, {
+  'id': 64,
+  'Name': 'Cycle in Graph',
+  'code': '263',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/263/problem/D'
+}, {
+  'id': 65,
+  'Name': 'Fixing Typos',
+  'code': '363',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/363/problem/C'
+}, {
+  'id': 66,
+  'Name': 'Cutting Figure',
+  'code': '194',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/194/problem/C'
+}, {
+  'id': 67,
+  'Name': 'Escape from Stones',
+  'code': '265',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/265/problem/C'
+}, {
+  'id': 68,
+  'Name': '=HYPERLINK("https://community.topcoder.com/stat?c=problem_statement&pm=5923&rd=8075","BestTriangulation")',
+  'code': '',
+  'level': 'D',
+  'url': 'SRM278-D2-500'
+}, {
+  'id': 69,
+  'Name': 'Trees on My Island',
+  'code': 'UVA 10088',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1029'
+}, {
+  'id': 70,
+  'Name': 'Packing polygons',
+  'code': 'UVA 10005',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=946'
+}, {
+  'id': 71,
+  'Name': 'Video Surveillance',
+  'code': 'UVA 588',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=529'
+}, {
+  'id': 72,
+  'Name': 'Xranges Pancakes',
+  'code': 'HACKR xrange',
+  'level': 'D',
+  'url': 'https://www.hackerrank.com/challenges/xrange-and-pizza'
+}, {
+  'id': 73,
+  'Name': 'Polygons',
+  'code': 'UVA 137',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=73'
+}, {
+  'id': 74,
+  'Name': 'Potholers',
+  'code': 'SPOJ POTHOLE',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/POTHOLE/'
+}, {
+  'id': 75,
+  'Name': 'Power Transmission',
+  'code': 'UVA 10330',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1271'
+}, {
+  'id': 76,
+  'Name': 'Gopher II',
+  'code': 'UVA 10080',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1021'
+}, {
+  'id': 77,
+  'Name': 'Software Allocation',
+  'code': 'UVA 259',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=195'
+}, {
+  'id': 78,
+  'Name': 'A Plug for UNIX',
+  'code': 'UVA 753',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=694'
+}, {
+  'id': 79,
+  'Name': 'Intergalactic Map',
+  'code': 'SPOJ IM',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/IM'
+}, {
+  'id': 80,
+  'Name': 'Fence Obstacle Course',
+  'code': 'PKU 2374',
+  'level': 'D',
+  'url': 'http://poj.org/problem?id=2374'
+}, {
+  'id': 81,
+  'Name': 'River Crossing',
+  'code': '',
+  'level': 'D',
+  'url': 'UVA 10514'
+}];
+var D1 = [{
+  'id': 1,
+  'Name': 'Dividing Island',
+  'code': '63',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/63/problem/D'
+}, {
+  'id': 2,
+  'Name': 'Flowers',
+  'code': '474',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/474/problem/D'
+}, {
+  'id': 3,
+  'Name': 'Dima and Bacteria',
+  'code': '400',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/400/problem/D'
+}, {
+  'id': 4,
+  'Name': 'Tourist Problem',
+  'code': '340',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/340/problem/C'
+}, {
+  'id': 5,
+  'Name': 'Lorenzo Von Matterhorn',
+  'code': '697',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/697/problem/C'
+}, {
+  'id': 6,
+  'Name': 'Restore Graph',
+  'code': '404',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/404/problem/C'
+}, {
+  'id': 7,
+  'Name': 'Interval Product',
+  'code': 'UVA 12532',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3977'
+}, {
+  'id': 8,
+  'Name': 'Potentiometers',
+  'code': 'LIVEARCHIVE 2191',
+  'level': 'D',
+  'url': 'https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=192'
+}, {
+  'id': 9,
+  'Name': 'Halt The War',
+  'code': 'SPOJ CDC12_H',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/CDC12_H'
+}, {
+  'id': 10,
+  'Name': 'Counting Primes',
+  'code': 'SPOJ CNTPRIME',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/CNTPRIME'
+}, {
+  'id': 11,
+  'Name': 'Horrible Queries',
+  'code': 'SPOJ HORRIBLE',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/HORRIBLE'
+}, {
+  'id': 12,
+  'Name': 'Light Switching',
+  'code': 'SPOJ LITE',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/LITE/'
+}, {
+  'id': 13,
+  'Name': 'Circular RMQ',
+  'code': '52',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/52/problem/C'
+}, {
+  'id': 14,
+  'Name': 'A Famous City',
+  'code': 'SPOJ CITY2',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/CITY2/'
+}, {
+  'id': 15,
+  'Name': 'RMQ with Shifts',
+  'code': 'UVA 12299',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3720'
+}, {
+  'id': 16,
+  'Name': 'R2D2 and Droid Army',
+  'code': '514',
+  'level': 'D',
+  'url': 'http://codeforces.com/problemset/problem/514/D'
+}, {
+  'id': 17,
+  'Name': 'Ahoy, Pirates!',
+  'code': 'UVA 11402',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2397'
+}, {
+  'id': 18,
+  'Name': 'Brackets',
+  'code': 'SPOJ BRCKTS',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/BRCKTS'
+}, {
+  'id': 19,
+  'Name': 'Present',
+  'code': '460',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/460/problem/C'
+}, {
+  'id': 20,
+  'Name': '=HYPERLINK("https://community.topcoder.com/stat?c=problem_statement&pm=1331&rd=4550","MessageMess")',
+  'code': '',
+  'level': 'D',
+  'url': 'SRM149-D1-500'
+}, {
+  'id': 21,
+  'Name': '=HYPERLINK("https://community.topcoder.com/stat?c=problem_statement&pm=7601&rd=10673","DiceGames")',
+  'code': '',
+  'level': 'D',
+  'url': 'SRM349-D1-500'
+}, {
+  'id': 22,
+  'Name': 'Mirror, Mirror',
+  'code': 'UVA 466',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=407'
+}, {
+  'id': 23,
+  'Name': 'Maximum Sum',
+  'code': 'SPOJ KGSS',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/KGSS/'
+}, {
+  'id': 24,
+  'Name': 'Quantity of Strings',
+  'code': '151',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/151/problem/D'
+}, {
+  'id': 25,
+  'Name': 'Eternal Victory',
+  'code': '61',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/61/problem/D'
+}, {
+  'id': 26,
+  'Name': 'Array Division',
+  'code': '808',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/808/problem/D'
+}, {
+  'id': 27,
+  'Name': 'Hiring Staff',
+  'code': '216',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/216/problem/C'
+}, {
+  'id': 28,
+  'Name': 'Tavas and Karafs',
+  'code': '535',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/535/problem/C'
+}, {
+  'id': 29,
+  'Name': 'Permutations',
+  'code': '189',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/189/problem/C'
+}, {
+  'id': 30,
+  'Name': 'Spiders Web',
+  'code': '216',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/216/problem/D'
+}, {
+  'id': 31,
+  'Name': 'Chips',
+  'code': '334',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/334/problem/D'
+}, {
+  'id': 32,
+  'Name': 'Vasya and String',
+  'code': '676',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/676/problem/C'
+}, {
+  'id': 33,
+  'Name': 'The SetStack Computer',
+  'code': 'LiveArchive 3634',
+  'level': 'D',
+  'url': 'https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&category=19&page=show_problem&problem=1635'
+}, {
+  'id': 34,
+  'Name': 'Database',
+  'code': 'UVA 1592',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4467'
+}, {
+  'id': 35,
+  'Name': 'Can you answer these queries I',
+  'code': 'SPOJ GSS1',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/GSS1/'
+}, {
+  'id': 36,
+  'Name': 'Can you answer these queries III',
+  'code': 'SPOJ GSS3',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/GSS3/'
+}, {
+  'id': 37,
+  'Name': 'Mahmoud and a Dictionary',
+  'code': '766',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/766/problem/D'
+}, {
+  'id': 38,
+  'Name': 'An overnight dance in discotheque',
+  'code': '814',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/814/problem/D'
+}, {
+  'id': 39,
+  'Name': 'Polyline',
+  'code': '617',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/617/problem/D'
+}, {
+  'id': 40,
+  'Name': 'Queue',
+  'code': '92',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/92/problem/D'
+}, {
+  'id': 41,
+  'Name': 'Plant',
+  'code': '186',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/186/problem/C'
+}, {
+  'id': 42,
+  'Name': 'Reberland Linguistics',
+  'code': '667',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/667/problem/C'
+}, {
+  'id': 43,
+  'Name': 'Lucky Permutation',
+  'code': '287',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/287/problem/C'
+}, {
+  'id': 44,
+  'Name': 'Dice Throwing',
+  'code': 'UVA 10759',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1700'
+}, {
+  'id': 45,
+  'Name': '=HYPERLINK("https://community.topcoder.com/stat?c=problem_statement&pm=7422&rd=10663","TestBettingStrategy")',
+  'code': '',
+  'level': 'D',
+  'url': 'SRM339-D1-500'
+}, {
+  'id': 46,
+  'Name': 'Collecting Bugs',
+  'code': 'PKU 2096',
+  'level': 'D',
+  'url': 'http://poj.org/problem?id=2096'
+}, {
+  'id': 47,
+  'Name': 'France 98',
+  'code': 'UVA 542',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=483'
+}, {
+  'id': 48,
+  'Name': 'Tribbles',
+  'code': 'UVA 11021',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1962'
+}, {
+  'id': 49,
+  'Name': 'Tennis contest',
+  'code': 'UVA 12457',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3888'
+}, {
+  'id': 50,
+  'Name': 'Water Falls',
+  'code': 'UVA 833',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=774'
+}, {
+  'id': 51,
+  'Name': 'Number Sequence',
+  'code': 'UVA 10706',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1647'
+}, {
+  'id': 52,
+  'Name': 'Is It A Tree?',
+  'code': 'UVA 615',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=556'
+}, {
+  'id': 53,
+  'Name': 'Help R2-D2!',
+  'code': 'SPOJ HELPR2D2',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/HELPR2D2'
+}, {
+  'id': 54,
+  'Name': 'Andrey and Problem',
+  'code': '443',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/443/problem/D'
+}, {
+  'id': 55,
+  'Name': 'Three Logos',
+  'code': '581',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/581/problem/D'
+}, {
+  'id': 56,
+  'Name': 'Good Sequences',
+  'code': '265',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/265/problem/D'
+}, {
+  'id': 57,
+  'Name': 'Party',
+  'code': '116',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/116/problem/C'
+}, {
+  'id': 58,
+  'Name': 'Cupboard and Balloons',
+  'code': '342',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/342/problem/C'
+}, {
+  'id': 59,
+  'Name': 'Cycles',
+  'code': '233',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/233/problem/C'
+}, {
+  'id': 60,
+  'Name': 'Pebble Solitaire',
+  'code': 'UVA 10651',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1592'
+}, {
+  'id': 61,
+  'Name': 'Kefa and Dishes',
+  'code': '580',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/580/problem/D'
+}, {
+  'id': 62,
+  'Name': 'Permutations',
+  'code': 'SPOJ PERMUT1',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/PERMUT1/'
+}, {
+  'id': 63,
+  'Name': 'Assignments',
+  'code': 'SPOJ ASSIGN',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/ASSIGN/'
+}, {
+  'id': 64,
+  'Name': 'Count the Faces.',
+  'code': 'UVA 10178',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1119'
+}, {
+  'id': 65,
+  'Name': 'LCM Cardinality',
+  'code': 'UVA 10892',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1833'
+}, {
+  'id': 66,
+  'Name': 'Robot Rapping Results Report time',
+  'code': '645',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/645/problem/D'
+}, {
+  'id': 67,
+  'Name': 'Wavio Sequence',
+  'code': 'UVA 10534',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1475'
+}, {
+  'id': 68,
+  'Name': 'Directed Roads',
+  'code': '711',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/711/problem/D'
+}, {
+  'id': 69,
+  'Name': 'Block Tower',
+  'code': '327',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/327/problem/D'
+}, {
+  'id': 70,
+  'Name': 'A and B and Interesting Substrings',
+  'code': '519',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/519/problem/D'
+}, {
+  'id': 71,
+  'Name': 'As Fast As Possible',
+  'code': '701',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/701/problem/D'
+}, {
+  'id': 72,
+  'Name': 'Chloe and pleasant prizes',
+  'code': '743',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/743/problem/D'
+}, {
+  'id': 73,
+  'Name': 'Roads in Berland',
+  'code': '25',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/25/problem/C'
+}, {
+  'id': 74,
+  'Name': 'Photographer',
+  'code': '203',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/203/problem/C'
+}, {
+  'id': 75,
+  'Name': 'LCM Challenge',
+  'code': '236',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/236/problem/C'
+}, {
+  'id': 76,
+  'Name': 'Search in the dictionary!',
+  'code': 'SPOJ DICT',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/DICT/'
+}, {
+  'id': 77,
+  'Name': 'Disk Tree',
+  'code': 'UVA 1556',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4331'
+}, {
+  'id': 78,
+  'Name': 'Phone List',
+  'code': 'SPOJ PHONELST',
+  'level': 'D',
+  'url': 'http://www.spoj.com/problems/PHONELST/'
+}, {
+  'id': 79,
+  'Name': 'Cellphone Typing',
+  'code': 'UVA 12526',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3971'
+}, {
+  'id': 80,
+  'Name': 'Vasiliys Multiset',
+  'code': '706',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/706/problem/D'
+}, {
+  'id': 81,
+  'Name': 'Exchange Rates',
+  'code': 'UVA 10113',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1054'
+}, {
+  'id': 82,
+  'Name': 'Equation',
+  'code': 'UVA 727',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=668'
+}, {
+  'id': 83,
+  'Name': 'Safe',
+  'code': '47',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/47/problem/D'
+}, {
+  'id': 84,
+  'Name': 'Central Post Office',
+  'code': 'UVA 12379',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3801'
+}, {
+  'id': 85,
+  'Name': 'Permalex',
+  'code': 'UVA 153',
+  'level': 'D',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=89'
+}, {
+  'id': 86,
+  'Name': 'Volleyball',
+  'code': '96',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/96/problem/D'
+}, {
+  'id': 87,
+  'Name': 'Lazy Student',
+  'code': '606',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/606/problem/D'
+}, {
+  'id': 88,
+  'Name': 'Multiplication Table',
+  'code': '448',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/448/problem/D'
+}, {
+  'id': 89,
+  'Name': 'Divisible by Seven',
+  'code': '376',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/376/problem/C'
+}, {
+  'id': 90,
+  'Name': 'Devu and Partitioning of the Array',
+  'code': '439',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/439/problem/C'
+}];
+var C2 = [{
+  'id': 1,
+  'Name': 'Win or Freeze',
+  'code': '151',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/151/problem/C'
+}, {
+  'id': 2,
+  'Name': 'Euclids Game',
+  'code': 'UVA 10368',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1309'
+}, {
+  'id': 3,
+  'Name': 'Pyramids',
+  'code': 'SPOJ PIR',
+  'level': 'C',
+  'url': 'http://www.spoj.com/problems/PIR/'
+}, {
+  'id': 4,
+  'Name': 'Power of Cryptography',
+  'code': 'UVA 113',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=49'
+}, {
+  'id': 5,
+  'Name': 'Is There A Second Way Left?',
+  'code': 'UVA 10462',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1403'
+}, {
+  'id': 6,
+  'Name': 'Modified GCD',
+  'code': '75',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/75/problem/C'
+}, {
+  'id': 7,
+  'Name': 'Alyona and mex',
+  'code': '740',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/740/problem/C'
+}, {
+  'id': 8,
+  'Name': 'Hamburgers',
+  'code': '371',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/371/problem/C'
+}, {
+  'id': 9,
+  'Name': 'Wet Shark and Flowers',
+  'code': '621',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/621/problem/C'
+}, {
+  'id': 10,
+  'Name': 'Predict Outcome of the Game',
+  'code': '451',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/451/problem/C'
+}, {
+  'id': 11,
+  'Name': 'Balls and Boxes',
+  'code': '260',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/260/problem/C'
+}, {
+  'id': 12,
+  'Name': 'Alice and Bob',
+  'code': '347',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/347/problem/C'
+}, {
+  'id': 13,
+  'Name': 'Mahmoud and Ehab and the wrong algorithm',
+  'code': '959',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/959/problem/C'
+}, {
+  'id': 14,
+  'Name': 'Almost Equal',
+  'code': '1206',
+  'level': 'C',
+  'url': 'https://codeforces.com/contest/1206/problem/C'
+}, {
+  'id': 15,
+  'Name': 'Balls Game',
+  'code': '430',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/430/problem/B'
+}, {
+  'id': 16,
+  'Name': 'Magical Array',
+  'code': '84',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/84/problem/B'
+}, {
+  'id': 17,
+  'Name': 'Jugs',
+  'code': 'UVA 571',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=512'
+}, {
+  'id': 18,
+  'Name': 'Sending email',
+  'code': 'UVA 10986',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1927'
+}, {
+  'id': 19,
+  'Name': 'Lift Hopping',
+  'code': 'UVA 10801',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1742'
+}, {
+  'id': 20,
+  'Name': 'Shopping',
+  'code': 'SPOJ SHOP',
+  'level': 'C',
+  'url': 'http://www.spoj.com/problems/SHOP/'
+}, {
+  'id': 21,
+  'Name': 'Ordering',
+  'code': 'UVA 872',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=813'
+}, {
+  'id': 22,
+  'Name': 'Karen and Coffee',
+  'code': '816',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/816/problem/B'
+}, {
+  'id': 23,
+  'Name': 'Bulls and Cows',
+  'code': '63',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/63/problem/C'
+}, {
+  'id': 24,
+  'Name': 'Xor-tree',
+  'code': '430',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/430/problem/C'
+}, {
+  'id': 25,
+  'Name': 'Median Smoothing',
+  'code': '591',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/591/problem/C'
+}, {
+  'id': 26,
+  'Name': 'Coloring Trees',
+  'code': '711',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/711/problem/C'
+}, {
+  'id': 27,
+  'Name': 'Clear Symmetry',
+  'code': '202',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/202/problem/C'
+}, {
+  'id': 28,
+  'Name': 'Sereja and Mirroring',
+  'code': '426',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/426/problem/B'
+}, {
+  'id': 29,
+  'Name': 'Restoring Painting',
+  'code': '675',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/675/problem/B'
+}, {
+  'id': 30,
+  'Name': 'Gleaming the Cubes',
+  'code': 'UVA 737',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=678'
+}, {
+  'id': 31,
+  'Name': 'Intersecting Line Segments',
+  'code': 'UVA 866',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=807'
+}, {
+  'id': 32,
+  'Name': 'The Circumference of the Circle',
+  'code': 'UVA 438',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=379'
+}, {
+  'id': 33,
+  'Name': 'Points in Figures: Rectangles and Circles',
+  'code': 'UVA 477',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=418'
+}, {
+  'id': 34,
+  'Name': 'Square Pegs And Round Holes',
+  'code': 'UVA 356',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=292'
+}, {
+  'id': 35,
+  'Name': 'Divisibility of Factors',
+  'code': 'UVA 10484',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1425'
+}, {
+  'id': 36,
+  'Name': 'Prime Permutation',
+  'code': '124',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/124/problem/C'
+}, {
+  'id': 37,
+  'Name': 'Hometask',
+  'code': '155',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/155/problem/C'
+}, {
+  'id': 38,
+  'Name': 'Terse princess',
+  'code': '148',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/148/problem/C'
+}, {
+  'id': 39,
+  'Name': 'Hacking Cypher',
+  'code': '490',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/490/problem/C'
+}, {
+  'id': 40,
+  'Name': 'Dreamoon and Sums',
+  'code': '476',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/476/problem/C'
+}, {
+  'id': 41,
+  'Name': 'Try and Catch',
+  'code': '195',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/195/problem/C'
+}, {
+  'id': 42,
+  'Name': 'Primes or Palindromes?',
+  'code': '569',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/569/problem/C'
+}, {
+  'id': 43,
+  'Name': 'View Angle',
+  'code': '257',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/257/problem/C'
+}, {
+  'id': 44,
+  'Name': 'Little Pony and Sort by Shift',
+  'code': '454',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/454/problem/B'
+}, {
+  'id': 45,
+  'Name': 'Unidirectional TSP',
+  'code': 'UVA 116',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=52'
+}, {
+  'id': 46,
+  'Name': 'Make Palindrome',
+  'code': 'UVA 10453',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1394'
+}, {
+  'id': 47,
+  'Name': 'Fast Food',
+  'code': 'UVA 662',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=603'
+}, {
+  'id': 48,
+  'Name': 'Palindromic Subsequence',
+  'code': 'UVA 11404',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2399'
+}, {
+  'id': 49,
+  'Name': 'Gone Fishing',
+  'code': 'UVA 757',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=698'
+}, {
+  'id': 50,
+  'Name': 'Special Olympics',
+  'code': '199',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/199/problem/B'
+}, {
+  'id': 51,
+  'Name': 'Rings and Glue',
+  'code': 'UVA 10301',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1242'
+}, {
+  'id': 52,
+  'Name': 'k-Tree',
+  'code': '431',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/431/problem/C'
+}, {
+  'id': 53,
+  'Name': 'Caesars Legions',
+  'code': '118',
+  'level': 'D',
+  'url': 'http://codeforces.com/contest/118/problem/D'
+}, {
+  'id': 54,
+  'Name': '=HYPERLINK("https://community.topcoder.com/stat?c=problem_statement&pm=4471&rd=10711","UnsealTheSafe")',
+  'code': '',
+  'level': 'C',
+  'url': 'SRM354-D2-1000'
+}, {
+  'id': 55,
+  'Name': '=HYPERLINK("https://community.topcoder.com/stat?c=problem_statement&pm=7601&rd=10673","DiceGames")',
+  'code': '',
+  'level': 'C',
+  'url': 'SRM349-D1-500'
+}, {
+  'id': 56,
+  'Name': 'No to Palindromes!',
+  'code': '465',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/465/problem/C'
+}, {
+  'id': 57,
+  'Name': 'Triangle',
+  'code': '408',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/408/problem/C'
+}, {
+  'id': 58,
+  'Name': 'To Add or Not to Add',
+  'code': '231',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/231/problem/C'
+}, {
+  'id': 59,
+  'Name': 'Number of Ways',
+  'code': '466',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/466/problem/C'
+}, {
+  'id': 60,
+  'Name': 'Queue',
+  'code': '141',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/141/problem/C'
+}, {
+  'id': 61,
+  'Name': 'Magical Boxes',
+  'code': '270',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/270/problem/C'
+}, {
+  'id': 62,
+  'Name': 'Find Pair',
+  'code': '160',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/160/problem/C'
+}, {
+  'id': 63,
+  'Name': 'Multitasking',
+  'code': '384',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/384/problem/B'
+}, {
+  'id': 64,
+  'Name': 'Non-square Equation',
+  'code': '233',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/233/problem/B'
+}, {
+  'id': 65,
+  'Name': 'Frogger',
+  'code': 'UVA 534',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=475'
+}, {
+  'id': 66,
+  'Name': 'Identifying Concurrent ',
+  'code': 'UVA 334',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=270'
+}, {
+  'id': 67,
+  'Name': 'Numbering Paths',
+  'code': 'UVA 125',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=61'
+}, {
+  'id': 68,
+  'Name': 'Jack Straws',
+  'code': 'UVA 273',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=209'
+}, {
+  'id': 69,
+  'Name': 'Longest Match',
+  'code': 'UVA 10100',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1041'
+}, {
+  'id': 70,
+  'Name': 'Isolated Segments',
+  'code': 'UVA 11343',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2318'
+}, {
+  'id': 71,
+  'Name': 'Counting',
+  'code': 'UVA 10198',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1139'
+}, {
+  'id': 72,
+  'Name': 'Mafia',
+  'code': '349',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/349/problem/C'
+}, {
+  'id': 73,
+  'Name': 'Sereja and Prefixes',
+  'code': '381',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/381/problem/C'
+}, {
+  'id': 74,
+  'Name': 'About Bacteria',
+  'code': '199',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/199/problem/C'
+}, {
+  'id': 75,
+  'Name': 'DNA Alignment',
+  'code': '520',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/520/problem/C'
+}, {
+  'id': 76,
+  'Name': 'Geometric Progression',
+  'code': '567',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/567/problem/C'
+}, {
+  'id': 77,
+  'Name': 'Watering Flowers',
+  'code': '617',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/617/problem/C'
+}, {
+  'id': 78,
+  'Name': 'Quiz',
+  'code': '337',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/337/problem/C'
+}, {
+  'id': 79,
+  'Name': 'Secret Combination',
+  'code': '496',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/496/problem/B'
+}, {
+  'id': 80,
+  'Name': 'MUH and Important Things',
+  'code': '471',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/471/problem/B'
+}, {
+  'id': 81,
+  'Name': 'Lucky Mask',
+  'code': '146',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/146/problem/B'
+}, {
+  'id': 82,
+  'Name': 'PT07Z',
+  'code': 'SPOJ PT07Z',
+  'level': 'C',
+  'url': 'http://www.spoj.com/problems/PT07Z/'
+}, {
+  'id': 83,
+  'Name': 'Roads in the North',
+  'code': 'UVA 10308',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1249'
+}, {
+  'id': 84,
+  'Name': 'Subway tree systems',
+  'code': 'LIVEARCHIVE 2935',
+  'level': 'C',
+  'url': 'https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=936'
+}, {
+  'id': 85,
+  'Name': 'Shaass and Lights',
+  'code': '294',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/294/problem/C'
+}, {
+  'id': 86,
+  'Name': 'Journey',
+  'code': '721',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/721/problem/C'
+}, {
+  'id': 87,
+  'Name': 'Captain Marmot',
+  'code': '474',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/474/problem/C'
+}, {
+  'id': 88,
+  'Name': 'The Big Race',
+  'code': '592',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/592/problem/C'
+}, {
+  'id': 89,
+  'Name': 'Mollys Chemicals',
+  'code': '776',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/776/problem/C'
+}, {
+  'id': 90,
+  'Name': 'Anatoly and Cockroaches',
+  'code': '719',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/719/problem/B'
+}, {
+  'id': 91,
+  'Name': 'Opposites Attract',
+  'code': '131',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/131/problem/B'
+}, {
+  'id': 92,
+  'Name': 'Railway',
+  'code': 'UVA 10263',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1204'
+}, {
+  'id': 93,
+  'Name': 'Factorial Factors',
+  'code': 'UVA 884',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=825'
+}, {
+  'id': 94,
+  'Name': 'Wifi Access',
+  'code': 'UVA 12748',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=4601'
+}, {
+  'id': 95,
+  'Name': 'Lining Up',
+  'code': 'UVA 270',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=206'
+}, {
+  'id': 96,
+  'Name': 'Pouring water',
+  'code': 'SPOJ POUR1',
+  'level': 'C',
+  'url': 'http://www.spoj.com/problems/POUR1/'
+}, {
+  'id': 97,
+  'Name': 'God, Save me',
+  'code': 'UVA 10777',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1718'
+}, {
+  'id': 98,
+  'Name': 'Checkposts',
+  'code': '427',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/427/problem/C'
+}, {
+  'id': 99,
+  'Name': 'Literature Lesson',
+  'code': '139',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/139/problem/C'
+}, {
+  'id': 100,
+  'Name': 'Arpas loud Owf and Mehrdads evil plan',
+  'code': '742',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/742/problem/C'
+}, {
+  'id': 101,
+  'Name': 'Parity Game',
+  'code': '298',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/298/problem/C'
+}, {
+  'id': 102,
+  'Name': 'Beauty Pageant',
+  'code': '246',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/246/problem/C'
+}, {
+  'id': 103,
+  'Name': 'Heroes',
+  'code': '80',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/80/problem/C'
+}, {
+  'id': 104,
+  'Name': 'Dynasty Puzzles',
+  'code': '192',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/192/problem/C'
+}, {
+  'id': 105,
+  'Name': 'Buns',
+  'code': '106',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/106/problem/C'
+}, {
+  'id': 106,
+  'Name': 'Counting Kangaroos is Fun',
+  'code': '373',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/373/problem/C'
+}, {
+  'id': 107,
+  'Name': 'Corporation Mail',
+  'code': '56',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/56/problem/C'
+}, {
+  'id': 108,
+  'Name': 'Matrix',
+  'code': '365',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/365/problem/C'
+}, {
+  'id': 109,
+  'Name': 'Pick up sticks',
+  'code': 'UVA 11686',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2733'
+}, {
+  'id': 110,
+  'Name': 'Little Elephant and Interval',
+  'code': '205',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/205/problem/C'
+}, {
+  'id': 111,
+  'Name': 'Sereja and Contest',
+  'code': '315',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/315/problem/C'
+}, {
+  'id': 112,
+  'Name': 'Vasya and Robot',
+  'code': '355',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/355/problem/C'
+}, {
+  'id': 113,
+  'Name': 'Hockey',
+  'code': '96',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/96/problem/C'
+}, {
+  'id': 114,
+  'Name': 'Petya and File System',
+  'code': '66',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/66/problem/C'
+}, {
+  'id': 115,
+  'Name': 'Kyoya and Colored Balls',
+  'code': '554',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/554/problem/C'
+}, {
+  'id': 116,
+  'Name': 'George and Job',
+  'code': '467',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/467/problem/C'
+}, {
+  'id': 117,
+  'Name': 'Harmony Analysis',
+  'code': '610',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/610/problem/C'
+}, {
+  'id': 118,
+  'Name': 'Anton and Making Potions',
+  'code': '734',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/734/problem/C'
+}, {
+  'id': 119,
+  'Name': 'Table Decorations',
+  'code': '478',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/478/problem/C'
+}, {
+  'id': 120,
+  'Name': 'Recycling Bottles',
+  'code': '672',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/672/problem/C'
+}, {
+  'id': 121,
+  'Name': 'Message',
+  'code': '157',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/157/problem/C'
+}, {
+  'id': 122,
+  'Name': 'Wilbur and Points',
+  'code': '596',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/596/problem/C'
+}, {
+  'id': 123,
+  'Name': 'Cows and Sequence',
+  'code': '284',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/284/problem/C'
+}, {
+  'id': 124,
+  'Name': 'Ladder',
+  'code': '279',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/279/problem/C'
+}, {
+  'id': 125,
+  'Name': 'Not Wool Sequences',
+  'code': '239',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/239/problem/C'
+}, {
+  'id': 126,
+  'Name': 'Anagram',
+  'code': '254',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/254/problem/C'
+}, {
+  'id': 127,
+  'Name': 'DZY Loves Sequences',
+  'code': '447',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/447/problem/C'
+}, {
+  'id': 128,
+  'Name': 'DZY Loves Physics',
+  'code': '445',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/445/problem/C'
+}, {
+  'id': 129,
+  'Name': 'Misha and Forest',
+  'code': '501',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/501/problem/C'
+}, {
+  'id': 130,
+  'Name': 'Jzzhu and Chocolate',
+  'code': '450',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/450/problem/C'
+}, {
+  'id': 131,
+  'Name': 'Cinema',
+  'code': '670',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/670/problem/C'
+}, {
+  'id': 132,
+  'Name': 'Report',
+  'code': '631',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/631/problem/C'
+}, {
+  'id': 133,
+  'Name': 'Bear and Prime Numbers',
+  'code': '385',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/385/problem/C'
+}, {
+  'id': 134,
+  'Name': 'Robbery',
+  'code': '90',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/90/problem/C'
+}, {
+  'id': 135,
+  'Name': 'Vasya and Basketball',
+  'code': '493',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/493/problem/C'
+}, {
+  'id': 136,
+  'Name': 'Vanya and Scales',
+  'code': '552',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/552/problem/C'
+}, {
+  'id': 137,
+  'Name': 'Pashmak and Buses',
+  'code': '459',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/459/problem/C'
+}];
+var C1 = [{
+  'id': 1,
+  'Name': 'Drazil and Factorial',
+  'code': '515',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/515/problem/C'
+}, {
+  'id': 2,
+  'Name': 'Lucky Permutation Triple',
+  'code': '304',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/304/problem/C'
+}, {
+  'id': 3,
+  'Name': 'Soldier and Cards',
+  'code': '546',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/546/problem/C'
+}, {
+  'id': 4,
+  'Name': 'Watchmen',
+  'code': '651',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/651/problem/C'
+}, {
+  'id': 5,
+  'Name': 'Fox Dividing Cheese',
+  'code': '371',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/371/problem/B'
+}, {
+  'id': 6,
+  'Name': 'Duff in Love',
+  'code': '588',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/588/problem/B'
+}, {
+  'id': 7,
+  'Name': 'Twin Primes',
+  'code': 'UVA 10394',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1335'
+}, {
+  'id': 8,
+  'Name': 'Summation of Four ',
+  'code': 'UVA 10168',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1109'
+}, {
+  'id': 9,
+  'Name': 'The Lottery',
+  'code': 'UVA 10325',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1266'
+}, {
+  'id': 10,
+  'Name': 'Hamburgers',
+  'code': '371',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/371/problem/C'
+}, {
+  'id': 11,
+  'Name': 'Mint',
+  'code': 'UVA 10717',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1658'
+}, {
+  'id': 12,
+  'Name': 'BITMAP - Bitmap',
+  'code': 'SPOJ BITMAP',
+  'level': 'C',
+  'url': 'http://www.spoj.com/problems/BITMAP/'
+}, {
+  'id': 13,
+  'Name': 'The Child and Set',
+  'code': '437',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/437/problem/B'
+}, {
+  'id': 14,
+  'Name': 'Tanya and Postcard',
+  'code': '518',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/518/problem/B'
+}, {
+  'id': 15,
+  'Name': 'Greg and Array',
+  'code': '296',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/296/problem/C'
+}, {
+  'id': 16,
+  'Name': 'The World is a Theatre',
+  'code': '131',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/131/problem/C'
+}, {
+  'id': 17,
+  'Name': 'Trains',
+  'code': '88',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/88/problem/C'
+}, {
+  'id': 18,
+  'Name': 'Semifinals',
+  'code': '378',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/378/problem/B'
+}, {
+  'id': 19,
+  'Name': 'Towers',
+  'code': '479',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/479/problem/B'
+}, {
+  'id': 20,
+  'Name': 'To Carry or not to Carry',
+  'code': 'UVA 10469',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1410'
+}, {
+  'id': 21,
+  'Name': 'Beat the Spread!',
+  'code': 'UVA 10812',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1753'
+}, {
+  'id': 22,
+  'Name': 'Summation of Polynomials',
+  'code': 'UVA 10302',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1243'
+}, {
+  'id': 23,
+  'Name': 'Polly the Polynomial',
+  'code': 'UVA 498',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=439'
+}, {
+  'id': 24,
+  'Name': 'R U Kidding Mr. Feynman?',
+  'code': 'UVA 10509',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1450'
+}, {
+  'id': 25,
+  'Name': 'Wandering Queen',
+  'code': 'SPOJ QUEEN',
+  'level': 'C',
+  'url': 'http://www.spoj.com/problems/QUEEN/'
+}, {
+  'id': 26,
+  'Name': 'Searching for Graph',
+  'code': '402',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/402/problem/C'
+}, {
+  'id': 27,
+  'Name': 'Flying Saucer Segments',
+  'code': '227',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/227/problem/C'
+}, {
+  'id': 28,
+  'Name': 'Vasya and Petyas Game',
+  'code': '577',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/577/problem/C'
+}, {
+  'id': 29,
+  'Name': 'Round Table Knights',
+  'code': '71',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/71/problem/C'
+}, {
+  'id': 30,
+  'Name': 'Kefa and Park',
+  'code': '580',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/580/problem/C'
+}, {
+  'id': 31,
+  'Name': 'Knight Tournament',
+  'code': '357',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/357/problem/C'
+}, {
+  'id': 32,
+  'Name': 'Special Offer! Super Price 999 Bourles!',
+  'code': '219',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/219/problem/B'
+}, {
+  'id': 33,
+  'Name': 'Graph Coloring',
+  'code': 'UVA 193',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=129'
+}, {
+  'id': 34,
+  'Name': '23 out of 5',
+  'code': 'UVA 10344',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1285'
+}, {
+  'id': 35,
+  'Name': '8 Queens Chess Problem',
+  'code': 'UVA 750',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=691'
+}, {
+  'id': 36,
+  'Name': 'Assemble',
+  'code': 'UVA 12124',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3276'
+}, {
+  'id': 37,
+  'Name': 'Magic Formulas',
+  'code': '424',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/424/problem/C'
+}, {
+  'id': 38,
+  'Name': 'Pythagorean Triples',
+  'code': '707',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/707/problem/C'
+}, {
+  'id': 39,
+  'Name': 'Geralds Hexagon',
+  'code': '560',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/560/problem/C'
+}, {
+  'id': 40,
+  'Name': 'Points on Line',
+  'code': '252',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/252/problem/C'
+}, {
+  'id': 41,
+  'Name': 'Find Maximum',
+  'code': '353',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/353/problem/C'
+}, {
+  'id': 42,
+  'Name': 'Jzzhu and Sequences',
+  'code': '450',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/450/problem/B'
+}, {
+  'id': 43,
+  'Name': 'Simple Game',
+  'code': '570',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/570/problem/B'
+}, {
+  'id': 44,
+  'Name': 'Prime Matrix',
+  'code': '271',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/271/problem/B'
+}, {
+  'id': 45,
+  'Name': 'Vacation',
+  'code': 'UVA 10192',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1133'
+}, {
+  'id': 46,
+  'Name': 'Dividing coins',
+  'code': 'UVA 562',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=503'
+}, {
+  'id': 47,
+  'Name': 'The Blocks Problem',
+  'code': 'UVA 101',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=37'
+}, {
+  'id': 48,
+  'Name': 'Divisibility',
+  'code': 'UVA 10036',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=977'
+}, {
+  'id': 49,
+  'Name': 'Rational Resistance',
+  'code': '344',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/344/problem/C'
+}, {
+  'id': 50,
+  'Name': 'k-Multiple Free Set',
+  'code': '275',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/275/problem/C'
+}, {
+  'id': 51,
+  'Name': 'Polycarpus Dice',
+  'code': '534',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/534/problem/C'
+}, {
+  'id': 52,
+  'Name': 'Print Check',
+  'code': '631',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/631/problem/B'
+}, {
+  'id': 53,
+  'Name': 'Playing Cubes',
+  'code': '257',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/257/problem/B'
+}, {
+  'id': 54,
+  'Name': 'T-primes',
+  'code': '230',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/230/problem/B'
+}, {
+  'id': 55,
+  'Name': 'Creating Palindrome',
+  'code': 'UVA 11753',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2853'
+}, {
+  'id': 56,
+  'Name': 'Again Palindrome',
+  'code': 'UVA 10617',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1558'
+}, {
+  'id': 57,
+  'Name': 'Exploring Pyramids',
+  'code': 'UVA 1362',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4108'
+}, {
+  'id': 58,
+  'Name': 'Cutting Sticks',
+  'code': 'UVA 10003',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=944'
+}, {
+  'id': 59,
+  'Name': 'Optimal Array Multiplication Sequence',
+  'code': 'UVA 348',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=284'
+}, {
+  'id': 60,
+  'Name': 'Accordian Patience',
+  'code': 'UVA 127',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=63'
+}, {
+  'id': 61,
+  'Name': 'Software CRC',
+  'code': 'UVA 128',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=64'
+}, {
+  'id': 62,
+  'Name': 'Maze',
+  'code': '378',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/378/problem/C'
+}, {
+  'id': 63,
+  'Name': 'Thor',
+  'code': '705',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/705/problem/C'
+}, {
+  'id': 64,
+  'Name': 'Hard problem',
+  'code': '706',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/706/problem/C'
+}, {
+  'id': 65,
+  'Name': 'Unusual Product',
+  'code': '405',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/405/problem/C'
+}, {
+  'id': 66,
+  'Name': 'Palindrome Transformation',
+  'code': '486',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/486/problem/C'
+}, {
+  'id': 67,
+  'Name': 'Removing Columns',
+  'code': '496',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/496/problem/C'
+}, {
+  'id': 68,
+  'Name': 'Crazy Town',
+  'code': '499',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/499/problem/C'
+}, {
+  'id': 69,
+  'Name': 'Queue',
+  'code': '490',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/490/problem/B'
+}, {
+  'id': 70,
+  'Name': 'Vika and Squares',
+  'code': '610',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/610/problem/B'
+}, {
+  'id': 71,
+  'Name': 'Cosmic Tables',
+  'code': '222',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/222/problem/B'
+}, {
+  'id': 72,
+  'Name': 'Prime Factors',
+  'code': 'UVA 583',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=524'
+}, {
+  'id': 73,
+  'Name': 'Mr. Azad and his Son',
+  'code': 'UVA 10490',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1431'
+}, {
+  'id': 74,
+  'Name': 'Perfect P-th Powers',
+  'code': 'UVA 10622',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1563'
+}, {
+  'id': 75,
+  'Name': 'Prime Land',
+  'code': 'UVA 516',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=457'
+}, {
+  'id': 76,
+  'Name': 'Spreadsheet',
+  'code': 'UVA 196',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=132'
+}, {
+  'id': 77,
+  'Name': 'Text Editor',
+  'code': '253',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/253/problem/C'
+}, {
+  'id': 78,
+  'Name': 'Alternative Thinking',
+  'code': '604',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/604/problem/C'
+}, {
+  'id': 79,
+  'Name': 'Tennis Championship',
+  'code': '735',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/735/problem/C'
+}, {
+  'id': 80,
+  'Name': 'Guess Your Way Out!',
+  'code': '507',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/507/problem/C'
+}, {
+  'id': 81,
+  'Name': 'Biathlon',
+  'code': '84',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/84/problem/C'
+}, {
+  'id': 82,
+  'Name': 'Marina and Vasya',
+  'code': '584',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/584/problem/C'
+}, {
+  'id': 83,
+  'Name': 'Divide by Three',
+  'code': '792',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/792/problem/C'
+}, {
+  'id': 84,
+  'Name': 'Covered Path',
+  'code': '534',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/534/problem/B'
+}, {
+  'id': 85,
+  'Name': 'Facetook Priority Wall',
+  'code': '75',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/75/problem/B'
+}, {
+  'id': 86,
+  'Name': 'Treasure Hunt',
+  'code': '979',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/979/problem/B'
+}, {
+  'id': 87,
+  'Name': 'How Many Points of ?',
+  'code': 'UVA 10790',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1731'
+}, {
+  'id': 88,
+  'Name': 'Factovisors',
+  'code': 'UVA 10139',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=1080'
+}, {
+  'id': 89,
+  'Name': 'Fractions Again?!',
+  'code': 'UVA 10976',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1917'
+}, {
+  'id': 90,
+  'Name': 'Cut Ribbon',
+  'code': '189',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/189/problem/A'
+}, {
+  'id': 91,
+  'Name': 'Cows and Cars',
+  'code': 'UVA 10491',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1432'
+}, {
+  'id': 92,
+  'Name': 'What is the Probability?',
+  'code': 'UVA 10056',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=997'
+}, {
+  'id': 93,
+  'Name': 'Let’s Dance',
+  'code': 'UVA 10218',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1159'
+}, {
+  'id': 94,
+  'Name': 'Probability|Given',
+  'code': 'UVA 11181',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2122'
+}, {
+  'id': 95,
+  'Name': 'Another lottery',
+  'code': 'UVA 11628',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2675'
+}, {
+  'id': 96,
+  'Name': 'Airplane',
+  'code': 'UVA 12461',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3904'
+}, {
+  'id': 97,
+  'Name': 'Rankings',
+  'code': 'UVA 12263',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3415'
+}, {
+  'id': 98,
+  'Name': 'Hacker, pack your bags!',
+  'code': '822',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/822/problem/C'
+}, {
+  'id': 99,
+  'Name': 'The Meaningless Game',
+  'code': '834',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/834/problem/C'
+}, {
+  'id': 100,
+  'Name': 'Star sky',
+  'code': '835',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/835/problem/C'
+}, {
+  'id': 101,
+  'Name': 'Diverse Permutation',
+  'code': '483',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/483/problem/C'
+}, {
+  'id': 102,
+  'Name': 'Replacement',
+  'code': '136',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/136/problem/C'
+}, {
+  'id': 103,
+  'Name': 'Homework',
+  'code': '102',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/102/problem/C'
+}, {
+  'id': 104,
+  'Name': 'Little Elephant and Problem',
+  'code': '221',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/221/problem/C'
+}, {
+  'id': 105,
+  'Name': 'Developing Skills',
+  'code': '581',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/581/problem/C'
+}, {
+  'id': 106,
+  'Name': 'Maxim and Discounts',
+  'code': '262',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/262/problem/C'
+}, {
+  'id': 107,
+  'Name': 'Fox and Box Accumulation',
+  'code': '389',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/389/problem/C'
+}, {
+  'id': 108,
+  'Name': 'Ice Skating',
+  'code': '218',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/218/problem/C'
+}, {
+  'id': 109,
+  'Name': 'Valera and Tubes',
+  'code': '441',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/441/problem/C'
+}, {
+  'id': 110,
+  'Name': 'Secret',
+  'code': '271',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/271/problem/C'
+}, {
+  'id': 111,
+  'Name': 'Key Task',
+  'code': 'SPOJ CERC07K',
+  'level': 'C',
+  'url': 'http://www.spoj.com/problems/CERC07K/'
+}, {
+  'id': 112,
+  'Name': 'Cleaning Robot',
+  'code': 'SPOJ CLEANRBT',
+  'level': 'C',
+  'url': 'http://www.spoj.com/problems/CLEANRBT/'
+}, {
+  'id': 113,
+  'Name': 'They Are Everywhere',
+  'code': '701',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/701/problem/C'
+}, {
+  'id': 114,
+  'Name': 'Monitor',
+  'code': '16',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/16/problem/C'
+}, {
+  'id': 115,
+  'Name': 'System Administrator',
+  'code': '22',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/22/problem/C'
+}, {
+  'id': 116,
+  'Name': 'Lucky Sum',
+  'code': '122',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/122/problem/C'
+}, {
+  'id': 117,
+  'Name': 'NP-Hard Problem',
+  'code': '688',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/688/problem/C'
+}, {
+  'id': 118,
+  'Name': 'Vladik and fractions',
+  'code': '743',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/743/problem/C'
+}, {
+  'id': 119,
+  'Name': 'Case of Matryoshkas',
+  'code': '556',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/556/problem/C'
+}, {
+  'id': 120,
+  'Name': 'Vanya and Label',
+  'code': '677',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/677/problem/C'
+}, {
+  'id': 121,
+  'Name': 'Exams',
+  'code': '479',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/479/problem/C'
+}, {
+  'id': 122,
+  'Name': 'Boredom',
+  'code': '456',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/456/problem/C'
+}, {
+  'id': 123,
+  'Name': 'Learning Languages',
+  'code': '278',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/278/problem/C'
+}, {
+  'id': 124,
+  'Name': 'Beautiful Sets of Points',
+  'code': '268',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/268/problem/C'
+}, {
+  'id': 125,
+  'Name': 'Strategic Defense Initiative',
+  'code': 'UVA 497',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=438'
+}, {
+  'id': 126,
+  'Name': 'String to Palindrome',
+  'code': 'UVA 10739',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1680'
+}, {
+  'id': 127,
+  'Name': 'Trouble of 13-Dots',
+  'code': 'UVA 10819',
+  'level': 'C',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1760'
+}, {
+  'id': 128,
+  'Name': 'Sagheer and Nubian Market',
+  'code': '812',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/812/problem/C'
+}, {
+  'id': 129,
+  'Name': 'Purification',
+  'code': '330',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/330/problem/C'
+}, {
+  'id': 130,
+  'Name': 'Division into Teams',
+  'code': '149',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/149/problem/C'
+}, {
+  'id': 131,
+  'Name': 'Disposition',
+  'code': '49',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/49/problem/C'
+}, {
+  'id': 132,
+  'Name': 'Mashmokh and Numbers',
+  'code': '415',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/415/problem/C'
+}, {
+  'id': 133,
+  'Name': 'Statues',
+  'code': '129',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/129/problem/C'
+}, {
+  'id': 134,
+  'Name': 'Inna and Huge Candy Matrix',
+  'code': '400',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/400/problem/C'
+}, {
+  'id': 135,
+  'Name': 'Anagram Search',
+  'code': '144',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/144/problem/C'
+}, {
+  'id': 136,
+  'Name': 'Ilya and Sticks',
+  'code': '525',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/525/problem/C'
+}, {
+  'id': 137,
+  'Name': 'Day at the Beach',
+  'code': '599',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/599/problem/C'
+}, {
+  'id': 138,
+  'Name': 'Appleman and Toastman',
+  'code': '462',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/462/problem/C'
+}, {
+  'id': 139,
+  'Name': 'Anya and Smartphone',
+  'code': '518',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/518/problem/C'
+}, {
+  'id': 140,
+  'Name': 'Little Girl and Maximum Sum',
+  'code': '276',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/276/problem/C'
+}, {
+  'id': 141,
+  'Name': 'Sereja and Algorithm',
+  'code': '368',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/368/problem/C'
+}, {
+  'id': 142,
+  'Name': 'The Child and Toy',
+  'code': '437',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/437/problem/C'
+}, {
+  'id': 143,
+  'Name': 'Perfect Pair',
+  'code': '318',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/318/problem/C'
+}, {
+  'id': 144,
+  'Name': 'Another Problem on Strings',
+  'code': '165',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/165/problem/C'
+}, {
+  'id': 145,
+  'Name': 'Socks',
+  'code': '731',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/731/problem/C'
+}];
+var B = [{
+  'id': 1,
+  'Name': 'Petya and Countryside',
+  'code': '66',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/66/problem/B'
+}, {
+  'id': 2,
+  'Name': 'Bear and Finding Criminals',
+  'code': '680',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/680/problem/B'
+}, {
+  'id': 3,
+  'Name': 'Burglar and Matches',
+  'code': '16',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/16/problem/B'
+}, {
+  'id': 4,
+  'Name': 'Caisa and Pylons',
+  'code': '463',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/463/problem/B'
+}, {
+  'id': 5,
+  'Name': 'Sum of Digits',
+  'code': '102',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/102/problem/B'
+}, {
+  'id': 6,
+  'Name': 'Coins',
+  'code': '47',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/47/problem/B'
+}, {
+  'id': 7,
+  'Name': 'Effective Approach',
+  'code': '227',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/227/problem/B'
+}, {
+  'id': 8,
+  'Name': 'Easter Eggs',
+  'code': '78',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/78/problem/B'
+}, {
+  'id': 9,
+  'Name': 'Decoding',
+  'code': '746',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/746/problem/B'
+}, {
+  'id': 10,
+  'Name': 'Big Mod',
+  'code': 'UVA 374',
+  'level': 'B',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=310'
+}, {
+  'id': 11,
+  'Name': 'Combinations',
+  'code': 'UVA 369',
+  'level': 'B',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=305'
+}, {
+  'id': 12,
+  'Name': 'Pi',
+  'code': 'UVA 412',
+  'level': 'B',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=353'
+}, {
+  'id': 13,
+  'Name': 'Adding Reversed Numbers',
+  'code': 'UVA 713',
+  'level': 'B',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=654'
+}, {
+  'id': 14,
+  'Name': 'Taxi',
+  'code': 'TIMUS 1607',
+  'level': 'B',
+  'url': 'http://acm.timus.ru/problem.aspx?space=1&num=1607'
+}, {
+  'id': 15,
+  'Name': 'The Drunk Jailer',
+  'code': 'LIVEARCHIVE 2557',
+  'level': 'B',
+  'url': 'https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=558'
+}, {
+  'id': 16,
+  'Name': 'Vanya and Lanterns',
+  'code': '492',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/492/problem/B'
+}, {
+  'id': 17,
+  'Name': 'Kuriyama Mirais Stones',
+  'code': '433',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/433/problem/B'
+}, {
+  'id': 18,
+  'Name': 'Fence',
+  'code': '363',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/363/problem/B'
+}, {
+  'id': 19,
+  'Name': 'Presidents Office',
+  'code': '6',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/6/problem/B'
+}, {
+  'id': 20,
+  'Name': 'Lovely Palindromes',
+  'code': '688',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/688/problem/B'
+}, {
+  'id': 21,
+  'Name': 'Sort the Array',
+  'code': '451',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/451/problem/B'
+}, {
+  'id': 22,
+  'Name': 'Summer sell-off',
+  'code': '810',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/810/problem/B'
+}, {
+  'id': 23,
+  'Name': 'Colorful Field',
+  'code': '79',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/79/problem/B'
+}, {
+  'id': 24,
+  'Name': 'Keyboard',
+  'code': '88',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/88/problem/B'
+}, {
+  'id': 25,
+  'Name': 'Mahmoud and a Triangle',
+  'code': '766',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/766/problem/B'
+}, {
+  'id': 26,
+  'Name': 'Tic-Tac-Toe ( I )',
+  'code': 'SPOJ TOE1',
+  'level': 'B',
+  'url': 'http://www.spoj.com/problems/TOE1/'
+}, {
+  'id': 27,
+  'Name': 'Tic-Tac-Toe ( II )',
+  'code': 'SPOJ TOE2',
+  'level': 'B',
+  'url': 'http://www.spoj.com/problems/TOE2/'
+}, {
+  'id': 28,
+  'Name': 'Knight Moves',
+  'code': 'UVA 439',
+  'level': 'B',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=380'
+}, {
+  'id': 29,
+  'Name': 'Kings Path',
+  'code': '242',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/242/problem/C'
+}, {
+  'id': 30,
+  'Name': 'Bookworm',
+  'code': 'TIMUS 1638',
+  'level': 'B',
+  'url': 'https://onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&problem=1402'
+}, {
+  'id': 31,
+  'Name': 'Students and Shoelaces',
+  'code': '129',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/129/problem/B'
+}, {
+  'id': 32,
+  'Name': 'Dreamoon and WiFi',
+  'code': '476',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/476/problem/B'
+}, {
+  'id': 33,
+  'Name': 'Chat Online',
+  'code': '469',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/469/problem/B'
+}, {
+  'id': 34,
+  'Name': 'Olympic Medal',
+  'code': '215',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/215/problem/B'
+}, {
+  'id': 35,
+  'Name': 'Filya and Homework',
+  'code': '714',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/714/problem/B'
+}, {
+  'id': 36,
+  'Name': 'Inna and New Matrix of Candies',
+  'code': '400',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/400/problem/B'
+}, {
+  'id': 37,
+  'Name': 'Steps',
+  'code': '152',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/152/problem/B'
+}, {
+  'id': 38,
+  'Name': 'Growing Mushrooms',
+  'code': '186',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/186/problem/B'
+}, {
+  'id': 39,
+  'Name': 'Escape',
+  'code': '148',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/148/problem/B'
+}, {
+  'id': 40,
+  'Name': 'Vacations',
+  'code': '699',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/699/problem/C'
+}, {
+  'id': 41,
+  'Name': 'Woodcutters',
+  'code': '545',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/545/problem/C'
+}, {
+  'id': 42,
+  'Name': 'Barcode',
+  'code': '225',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/225/problem/C'
+}, {
+  'id': 43,
+  'Name': 'Continents',
+  'code': 'UVA 11094',
+  'level': 'B',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2035'
+}, {
+  'id': 44,
+  'Name': 'Brownie Points',
+  'code': 'UVA 10865',
+  'level': 'B',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1806'
+}, {
+  'id': 45,
+  'Name': 'Hanoi Tower',
+  'code': 'TIMUS 1054',
+  'level': 'B',
+  'url': 'http://acm.timus.ru/problem.aspx?space=1&num=1054'
+}, {
+  'id': 46,
+  'Name': 'Roma and Changing Signs',
+  'code': '262',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/262/problem/B'
+}, {
+  'id': 47,
+  'Name': 'Bear and Strings',
+  'code': '385',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/385/problem/B'
+}, {
+  'id': 48,
+  'Name': 'I.O.U.',
+  'code': '376',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/376/problem/B'
+}, {
+  'id': 49,
+  'Name': 'Jeff and Periods',
+  'code': '352',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/352/problem/B'
+}, {
+  'id': 50,
+  'Name': 'Meeting',
+  'code': '144',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/144/problem/B'
+}, {
+  'id': 51,
+  'Name': 'Chocolate',
+  'code': '617',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/617/problem/B'
+}, {
+  'id': 52,
+  'Name': 'Easy Number Challenge',
+  'code': '236',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/236/problem/B'
+}, {
+  'id': 53,
+  'Name': 'Han Solo and Lazer Gun',
+  'code': '514',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/514/problem/B'
+}, {
+  'id': 54,
+  'Name': 'Physics Practical',
+  'code': '253',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/253/problem/B'
+}, {
+  'id': 55,
+  'Name': 'Two Buttons',
+  'code': '520',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/520/problem/B'
+}, {
+  'id': 56,
+  'Name': 'Intersecting Lines',
+  'code': 'UVA 378',
+  'level': 'B',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=314'
+}, {
+  'id': 57,
+  'Name': 'The Stern-Brocot Number',
+  'code': 'UVA 10077',
+  'level': 'B',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1018'
+}, {
+  'id': 58,
+  'Name': 'Mr. Kitayutas Colorful Graph',
+  'code': '505',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/505/problem/B'
+}, {
+  'id': 59,
+  'Name': 'DZY Loves Chemistry',
+  'code': '445',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/445/problem/B'
+}, {
+  'id': 60,
+  'Name': 'Kolya and Tanya',
+  'code': '584',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/584/problem/B'
+}, {
+  'id': 61,
+  'Name': 'Suffix Structures',
+  'code': '448',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/448/problem/B'
+}, {
+  'id': 62,
+  'Name': 'Complete the Word',
+  'code': '716',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/716/problem/B'
+}, {
+  'id': 63,
+  'Name': 'Sea and Islands',
+  'code': '544',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/544/problem/B'
+}, {
+  'id': 64,
+  'Name': 'Hopscotch',
+  'code': '141',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/141/problem/B'
+}, {
+  'id': 65,
+  'Name': 'Valera and Contest',
+  'code': '369',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/369/problem/B'
+}, {
+  'id': 66,
+  'Name': 'Bear and Friendship Condition',
+  'code': '791',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/791/problem/B'
+}, {
+  'id': 67,
+  'Name': 'Preparing Olympiad',
+  'code': '550',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/550/problem/B'
+}, {
+  'id': 68,
+  'Name': 'Highways',
+  'code': 'UVA 10147',
+  'level': 'B',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1088'
+}, {
+  'id': 69,
+  'Name': 'ACM contest and Blackout',
+  'code': 'UVA 10600',
+  'level': 'B',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1541'
+}, {
+  'id': 70,
+  'Name': 'Virtual Friends',
+  'code': 'UVA 11503',
+  'level': 'B',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2498'
+}, {
+  'id': 71,
+  'Name': 'Arctic Network',
+  'code': 'UVA 10369',
+  'level': 'B',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1310'
+}, {
+  'id': 72,
+  'Name': 'Trees on the level',
+  'code': 'UVA 122',
+  'level': 'B',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=58'
+}, {
+  'id': 73,
+  'Name': 'Final Standings',
+  'code': 'TIMUS 1100',
+  'level': 'B',
+  'url': 'http://acm.timus.ru/problem.aspx?space=1&num=1100'
+}, {
+  'id': 74,
+  'Name': 'Farm',
+  'code': 'TIMUS 1349',
+  'level': 'B',
+  'url': 'http://acm.timus.ru/problem.aspx?space=1&num=1349'
+}, {
+  'id': 75,
+  'Name': 'Mashmokh and Tokens',
+  'code': '415',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/415/problem/B'
+}, {
+  'id': 76,
+  'Name': 'Approximating a Constant Range',
+  'code': '602',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/602/problem/B'
+}, {
+  'id': 77,
+  'Name': 'Genas Code',
+  'code': '614',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/614/problem/B'
+}, {
+  'id': 78,
+  'Name': 'OR in Matrix',
+  'code': '486',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/486/problem/B'
+}, {
+  'id': 79,
+  'Name': 'Fox And Two Dots',
+  'code': '510',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/510/problem/B'
+}, {
+  'id': 80,
+  'Name': 'Routine Problem',
+  'code': '337',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/337/problem/B'
+}, {
+  'id': 81,
+  'Name': 'Vasya and Wrestling',
+  'code': '493',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/493/problem/B'
+}, {
+  'id': 82,
+  'Name': 'Hamming Distance Sum',
+  'code': '608',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/608/problem/B'
+}, {
+  'id': 83,
+  'Name': 'Wet Shark and Bishops',
+  'code': '621',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/621/problem/B'
+}, {
+  'id': 84,
+  'Name': 'Kefa and Company',
+  'code': '580',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/580/problem/B'
+}, {
+  'id': 85,
+  'Name': 'Tavas and SaDDas',
+  'code': '535',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/535/problem/B'
+}, {
+  'id': 86,
+  'Name': 'Minimum Ternary String',
+  'code': '1009',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/1009/problem/B'
+}, {
+  'id': 87,
+  'Name': 'Painting Eggs',
+  'code': '282',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/282/problem/B'
+}, {
+  'id': 88,
+  'Name': 'Pasha Maximizes',
+  'code': '435',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/435/problem/B'
+}, {
+  'id': 89,
+  'Name': 'Little Girl and Game',
+  'code': '276',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/276/problem/B'
+}, {
+  'id': 90,
+  'Name': 'Pasha and String',
+  'code': '525',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/525/problem/B'
+}, {
+  'id': 91,
+  'Name': 'Booking System',
+  'code': '416',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/416/problem/C'
+}, {
+  'id': 92,
+  'Name': 'Vanya and Exams',
+  'code': '492',
+  'level': 'C',
+  'url': 'http://codeforces.com/contest/492/problem/C'
+}, {
+  'id': 93,
+  'Name': 'The Skyline Problem',
+  'code': 'UVA 105',
+  'level': 'B',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=41'
+}, {
+  'id': 94,
+  'Name': 'Hanoi Tower Troubles !',
+  'code': 'UVA 10276',
+  'level': 'B',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1217'
+}, {
+  'id': 95,
+  'Name': 'Maze Exploration',
+  'code': 'UVA 784',
+  'level': 'B',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=725'
+}, {
+  'id': 96,
+  'Name': 'IP-TV',
+  'code': '',
+  'level': 'B',
+  'url': 'UVA 1174'
+}, {
+  'id': 97,
+  'Name': 'Devu, the Dumb Guy',
+  'code': '439',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/439/problem/B'
+}, {
+  'id': 98,
+  'Name': 'Find The Bone',
+  'code': '796',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/796/problem/B'
+}, {
+  'id': 99,
+  'Name': 'Regular Bracket Sequence',
+  'code': '26',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/26/problem/B'
+}, {
+  'id': 100,
+  'Name': 'Inbox (100500)',
+  'code': '465',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/465/problem/B'
+}, {
+  'id': 101,
+  'Name': 'Different is Good',
+  'code': '672',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/672/problem/B'
+}, {
+  'id': 102,
+  'Name': 'Permutation',
+  'code': '137',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/137/problem/B'
+}, {
+  'id': 103,
+  'Name': 'Little Elephant and Magic Square',
+  'code': '259',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/259/problem/B'
+}, {
+  'id': 104,
+  'Name': 'Airport',
+  'code': '218',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/218/problem/B'
+}, {
+  'id': 105,
+  'Name': 'Cormen --- The Best Friend Of a Man',
+  'code': '732',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/732/problem/B'
+}, {
+  'id': 106,
+  'Name': 'Prison Transfer',
+  'code': '427',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/427/problem/B'
+}, {
+  'id': 107,
+  'Name': 'A and B and Compilation Errors',
+  'code': '519',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/519/problem/B'
+}, {
+  'id': 108,
+  'Name': 'Letter',
+  'code': '43',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/43/problem/B'
+}, {
+  'id': 109,
+  'Name': 'Game of Robots',
+  'code': '670',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/670/problem/B'
+}, {
+  'id': 110,
+  'Name': 'African Crossword',
+  'code': '90',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/90/problem/B'
+}, {
+  'id': 111,
+  'Name': 'Cows and Poker Game',
+  'code': '284',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/284/problem/B'
+}, {
+  'id': 112,
+  'Name': 'Find Marble',
+  'code': '285',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/285/problem/B'
+}, {
+  'id': 113,
+  'Name': 'Interesting drink',
+  'code': '706',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/706/problem/B'
+}, {
+  'id': 114,
+  'Name': 'Megacity',
+  'code': '424',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/424/problem/B'
+}, {
+  'id': 115,
+  'Name': 'Beautiful Paintings',
+  'code': '651',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/651/problem/B'
+}, {
+  'id': 116,
+  'Name': 'Ilya and Queries',
+  'code': '313',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/313/problem/B'
+}, {
+  'id': 117,
+  'Name': 'Code Parsing',
+  'code': '255',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/255/problem/B'
+}, {
+  'id': 118,
+  'Name': 'Hungry Sequence',
+  'code': '327',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/327/problem/B'
+}, {
+  'id': 119,
+  'Name': 'Chloe and the sequence',
+  'code': '743',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/743/problem/B'
+}, {
+  'id': 120,
+  'Name': 'Luxurious Houses',
+  'code': '581',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/581/problem/B'
+}, {
+  'id': 121,
+  'Name': 'Settlers Training',
+  'code': '63',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/63/problem/B'
+}, {
+  'id': 122,
+  'Name': 'Far Relative’s Problem',
+  'code': '629',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/629/problem/B'
+}, {
+  'id': 123,
+  'Name': 'Wilbur and Array',
+  'code': '596',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/596/problem/B'
+}, {
+  'id': 124,
+  'Name': 'Text Document Analysis',
+  'code': '723',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/723/problem/B'
+}, {
+  'id': 125,
+  'Name': 'Shower Line',
+  'code': '431',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/431/problem/B'
+}, {
+  'id': 126,
+  'Name': 'Misha and Changing Handles',
+  'code': '501',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/501/problem/B'
+}, {
+  'id': 127,
+  'Name': 'Coat of Anticubism',
+  'code': '667',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/667/problem/B'
+}, {
+  'id': 128,
+  'Name': 'Ternary Logic',
+  'code': '136',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/136/problem/B'
+}, {
+  'id': 129,
+  'Name': 'Counting Rhombi',
+  'code': '189',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/189/problem/B'
+}, {
+  'id': 130,
+  'Name': 'Pashmak and Flowers',
+  'code': '459',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/459/problem/B'
+}, {
+  'id': 131,
+  'Name': 'The Monster and the Squirrel',
+  'code': '592',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/592/problem/B'
+}, {
+  'id': 132,
+  'Name': 'The Fibonacci Segment',
+  'code': '365',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/365/problem/B'
+}, {
+  'id': 133,
+  'Name': 'Spider Man',
+  'code': '705',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/705/problem/B'
+}, {
+  'id': 134,
+  'Name': 'Little Robber Girls Zoo',
+  'code': '686',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/686/problem/B'
+}, {
+  'id': 135,
+  'Name': 'Unary',
+  'code': '133',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/133/problem/B'
+}, {
+  'id': 136,
+  'Name': 'Canvas Frames',
+  'code': '127',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/127/problem/B'
+}, {
+  'id': 137,
+  'Name': 'Ohana Cleans Up',
+  'code': '554',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/554/problem/B'
+}, {
+  'id': 138,
+  'Name': 'Garland',
+  'code': '408',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/408/problem/B'
+}, {
+  'id': 139,
+  'Name': 'Petya and Staircases',
+  'code': '362',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/362/problem/B'
+}, {
+  'id': 140,
+  'Name': 'Equidistant String',
+  'code': '545',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/545/problem/B'
+}, {
+  'id': 141,
+  'Name': 'Vanya and Food Processor',
+  'code': '677',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/677/problem/B'
+}, {
+  'id': 142,
+  'Name': 'Calendar',
+  'code': '304',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/304/problem/B'
+}, {
+  'id': 143,
+  'Name': 'Amr and Pins',
+  'code': '507',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/507/problem/B'
+}, {
+  'id': 144,
+  'Name': 'Polo the Penguin and Matrix',
+  'code': '289',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/289/problem/B'
+}, {
+  'id': 145,
+  'Name': 'George and Round',
+  'code': '387',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/387/problem/B'
+}, {
+  'id': 146,
+  'Name': 'Alyona and flowers',
+  'code': '740',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/740/problem/B'
+}, {
+  'id': 147,
+  'Name': 'Urbanization',
+  'code': '735',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/735/problem/B'
+}, {
+  'id': 148,
+  'Name': 'Testing Pants for Sadness',
+  'code': '104',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/104/problem/B'
+}, {
+  'id': 149,
+  'Name': 'Cells Not Under Attack',
+  'code': '701',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/701/problem/B'
+}, {
+  'id': 150,
+  'Name': 'Vanya and Books',
+  'code': '552',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/552/problem/B'
+}, {
+  'id': 151,
+  'Name': 'Worms',
+  'code': '474',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/474/problem/B'
+}, {
+  'id': 152,
+  'Name': 'Fortune Telling',
+  'code': '59',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/59/problem/B'
+}, {
+  'id': 153,
+  'Name': 'Walking in the Rain',
+  'code': '192',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/192/problem/B'
+}, {
+  'id': 154,
+  'Name': 'Dima and To-do List',
+  'code': '366',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/366/problem/B'
+}, {
+  'id': 155,
+  'Name': 'Sail',
+  'code': '298',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/298/problem/B'
+}, {
+  'id': 156,
+  'Name': 'Fox and Cross',
+  'code': '389',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/389/problem/B'
+}, {
+  'id': 157,
+  'Name': 'Rebranding',
+  'code': '591',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/591/problem/B'
+}, {
+  'id': 158,
+  'Name': 'Increase and Decrease',
+  'code': '246',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/246/problem/B'
+}, {
+  'id': 159,
+  'Name': 'Alyona and Mex',
+  'code': '682',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/682/problem/B'
+}, {
+  'id': 160,
+  'Name': 'Coins',
+  'code': '58',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/58/problem/B'
+}, {
+  'id': 161,
+  'Name': 'Berland National Library',
+  'code': '567',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/567/problem/B'
+}, {
+  'id': 162,
+  'Name': 'Art Union',
+  'code': '416',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/416/problem/B'
+}, {
+  'id': 163,
+  'Name': 'BerSU Ball',
+  'code': '489',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/489/problem/B'
+}, {
+  'id': 164,
+  'Name': 'Random Teams',
+  'code': '478',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/478/problem/B'
+}, {
+  'id': 165,
+  'Name': 'Friends',
+  'code': '94',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/94/problem/B'
+}, {
+  'id': 166,
+  'Name': 'War of the Corporations',
+  'code': '625',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/625/problem/B'
+}, {
+  'id': 167,
+  'Name': 'Road Construction',
+  'code': '330',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/330/problem/B'
+}, {
+  'id': 168,
+  'Name': 'Binary Number',
+  'code': '92',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/92/problem/B'
+}, {
+  'id': 169,
+  'Name': 'Before an Exam',
+  'code': '4',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/4/problem/B'
+}, {
+  'id': 170,
+  'Name': 'Running Student',
+  'code': '9',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/9/problem/B'
+}, {
+  'id': 171,
+  'Name': 'Anton and currency you all know',
+  'code': '508',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/508/problem/B'
+}];
+var A = [{
+  'id': 1,
+  'Name': 'Vanya and Fence',
+  'code': '677',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/677/problem/A'
+}, {
+  'id': 2,
+  'Name': 'Anton and Danik',
+  'code': '734',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/734/problem/A'
+}, {
+  'id': 3,
+  'Name': 'Bear and Big Brother',
+  'code': '791',
+  'level': 'A',
+  'url': 'codeforces.com/contest/791/problem/A'
+}, {
+  'id': 4,
+  'Name': 'Team',
+  'code': '231',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/231/problem/A'
+}, {
+  'id': 5,
+  'Name': 'Beautiful Matrix',
+  'code': '263',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/263/problem/A'
+}, {
+  'id': 6,
+  'Name': 'Gravity Flip',
+  'code': '405',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/405/problem/A'
+}, {
+  'id': 7,
+  'Name': 'Petya and Strings',
+  'code': '112',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/112/problem/A'
+}, {
+  'id': 8,
+  'Name': 'Boy or Girl',
+  'code': '236',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/236/problem/A'
+}, {
+  'id': 9,
+  'Name': 'Word',
+  'code': '59',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/59/problem/A'
+}, {
+  'id': 10,
+  'Name': 'Magnets',
+  'code': '344',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/344/problem/A'
+}, {
+  'id': 11,
+  'Name': 'Sereja and Dima',
+  'code': '381',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/381/problem/A'
+}, {
+  'id': 12,
+  'Name': 'Stones on the Table',
+  'code': '266',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/266/problem/A'
+}, {
+  'id': 13,
+  'Name': 'Police Recruits',
+  'code': '427',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/427/problem/A'
+}, {
+  'id': 14,
+  'Name': 'Black Square',
+  'code': '431',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/431/problem/A'
+}, {
+  'id': 15,
+  'Name': 'Night at the Museum',
+  'code': '731',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/731/problem/A'
+}, {
+  'id': 16,
+  'Name': 'Games',
+  'code': '268',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/268/problem/A'
+}, {
+  'id': 17,
+  'Name': 'Buy a Shovel',
+  'code': '732',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/732/problem/A'
+}, {
+  'id': 18,
+  'Name': 'Is your horseshoe on the other hoof?',
+  'code': '228',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/228/problem/A'
+}, {
+  'id': 19,
+  'Name': 'Colorful Stones (Simplified Edition)',
+  'code': '265',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/265/problem/A'
+}, {
+  'id': 20,
+  'Name': 'Die Roll',
+  'code': '9',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/9/problem/A'
+}, {
+  'id': 21,
+  'Name': 'Shaass and Oskols',
+  'code': '294',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/294/problem/A'
+}, {
+  'id': 22,
+  'Name': 'Juicer',
+  'code': '709',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/709/problem/A'
+}, {
+  'id': 23,
+  'Name': 'Carrot Cakes',
+  'code': '799',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/799/problem/A'
+}, {
+  'id': 24,
+  'Name': 'Anton and Letters',
+  'code': '443',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/443/problem/A'
+}, {
+  'id': 25,
+  'Name': 'Way Too Long Words',
+  'code': '71',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/71/problem/A'
+}, {
+  'id': 26,
+  'Name': 'Free Ice Cream',
+  'code': '686',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/686/problem/A'
+}, {
+  'id': 27,
+  'Name': 'Helpful Maths',
+  'code': '339',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/339/problem/A'
+}, {
+  'id': 28,
+  'Name': 'Team Olympiad',
+  'code': '490',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/490/problem/A'
+}, {
+  'id': 29,
+  'Name': 'New Password',
+  'code': '770',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/770/problem/A'
+}, {
+  'id': 30,
+  'Name': 'Light, more light',
+  'code': 'UVA 10110',
+  'level': 'A',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1051'
+}, {
+  'id': 31,
+  'Name': 'Product',
+  'code': 'UVA 10106',
+  'level': 'A',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1047'
+}, {
+  'id': 32,
+  'Name': 'Uniform Generator',
+  'code': 'UVA 408',
+  'level': 'A',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=349'
+}, {
+  'id': 33,
+  'Name': 'Black and white painting',
+  'code': 'UVA 11231',
+  'level': 'A',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2172'
+}, {
+  'id': 34,
+  'Name': 'Electricity',
+  'code': 'UVA 12148',
+  'level': 'A',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3300'
+}, {
+  'id': 35,
+  'Name': 'Presents',
+  'code': '136',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/136/problem/A'
+}, {
+  'id': 36,
+  'Name': 'Lineland Mail',
+  'code': '567',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/567/problem/A'
+}, {
+  'id': 37,
+  'Name': 'Mahmoud and Longest Uncommon Subsequence',
+  'code': '766',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/766/problem/A'
+}, {
+  'id': 38,
+  'Name': 'Snacktower',
+  'code': '767',
+  'level': 'A',
+  'url': 'http://codeforces.com/problemset/problem/767/A'
+}, {
+  'id': 39,
+  'Name': 'Oath of the Nights Watch',
+  'code': '768',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/768/problem/A'
+}, {
+  'id': 40,
+  'Name': 'Pangram',
+  'code': '520',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/520/problem/A'
+}, {
+  'id': 41,
+  'Name': 'Twins',
+  'code': '160',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/160/problem/A'
+}, {
+  'id': 42,
+  'Name': 'Keyboard',
+  'code': '474',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/474/problem/A'
+}, {
+  'id': 43,
+  'Name': 'The Seasonal War',
+  'code': 'UVA 352',
+  'level': 'A',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=288'
+}, {
+  'id': 44,
+  'Name': 'Marcus',
+  'code': 'UVA 10452',
+  'level': 'A',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1393'
+}, {
+  'id': 45,
+  'Name': 'Battleships',
+  'code': 'UVA 11953',
+  'level': 'A',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3104'
+}, {
+  'id': 46,
+  'Name': 'Forming Teams',
+  'code': '216',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/216/problem/B'
+}, {
+  'id': 47,
+  'Name': 'Hierarchy',
+  'code': 'SPOJ MAKETREE',
+  'level': 'A',
+  'url': 'http://www.spoj.com/problems/MAKETREE/'
+}, {
+  'id': 48,
+  'Name': 'Ordering Tasks',
+  'code': 'UVA 10305',
+  'level': 'A',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1246'
+}, {
+  'id': 49,
+  'Name': 'Even Odds',
+  'code': '318',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/318/problem/A'
+}, {
+  'id': 50,
+  'Name': 'I Wanna Be the Guy',
+  'code': '469',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/469/problem/A'
+}, {
+  'id': 51,
+  'Name': 'Is it rated?',
+  'code': '807',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/807/problem/A'
+}, {
+  'id': 52,
+  'Name': 'Olesya and Rodion',
+  'code': '584',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/584/problem/A'
+}, {
+  'id': 53,
+  'Name': 'Football',
+  'code': '43',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/43/problem/A'
+}, {
+  'id': 54,
+  'Name': 'Brains Photos',
+  'code': '707',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/707/problem/A'
+}, {
+  'id': 55,
+  'Name': 'Dubstep',
+  'code': '208',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/208/problem/A'
+}, {
+  'id': 56,
+  'Name': 'Valera and X',
+  'code': '404',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/404/problem/A'
+}, {
+  'id': 57,
+  'Name': 'Arpa’s hard exam and Mehrdad’s naive cheat',
+  'code': '742',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/742/problem/A'
+}, {
+  'id': 58,
+  'Name': 'Calculating Function',
+  'code': '486',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/486/problem/A'
+}, {
+  'id': 59,
+  'Name': 'Theatre Square',
+  'code': '1',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/1/problem/A'
+}, {
+  'id': 60,
+  'Name': 'Anton and Polyhedrons',
+  'code': '785',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/785/problem/A'
+}, {
+  'id': 61,
+  'Name': 'Panoramixs Prediction',
+  'code': '80',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/80/problem/A'
+}, {
+  'id': 62,
+  'Name': 'Counterexample',
+  'code': '483',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/483/problem/A'
+}, {
+  'id': 63,
+  'Name': 'Wasted Time',
+  'code': '127',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/127/problem/A'
+}, {
+  'id': 64,
+  'Name': 'Points in Figures: Rectangles',
+  'code': 'UVA 476',
+  'level': 'A',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=417'
+}, {
+  'id': 65,
+  'Name': 'Overlapping Rectangles',
+  'code': 'UVA 460',
+  'level': 'A',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=401'
+}, {
+  'id': 66,
+  'Name': 'Fancy Fence',
+  'code': '270',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/270/problem/A'
+}, {
+  'id': 67,
+  'Name': 'Pouring Rain',
+  'code': '667',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/667/problem/A'
+}, {
+  'id': 68,
+  'Name': 'Fourth Point !!',
+  'code': 'UVA 10242',
+  'level': 'A',
+  'url': 'https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1183'
+}, {
+  'id': 69,
+  'Name': 'Good Number',
+  'code': '365',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/365/problem/A'
+}, {
+  'id': 70,
+  'Name': 'Dice Tower',
+  'code': '225',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/225/problem/A'
+}, {
+  'id': 71,
+  'Name': 'Alyona and Numbers',
+  'code': '682',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/682/problem/A'
+}, {
+  'id': 72,
+  'Name': 'Mountain Scenery',
+  'code': '218',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/218/problem/A'
+}, {
+  'id': 73,
+  'Name': 'Help Vasilisa the Wise 2',
+  'code': '143',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/143/problem/A'
+}, {
+  'id': 74,
+  'Name': 'Chewbaсca and Number',
+  'code': '514',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/514/problem/A'
+}, {
+  'id': 75,
+  'Name': 'Ksenia and Pan Scales',
+  'code': '382',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/382/problem/A'
+}, {
+  'id': 76,
+  'Name': 'Launch of Collider',
+  'code': '699',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/699/problem/A'
+}, {
+  'id': 77,
+  'Name': 'Polo the Penguin and Segments',
+  'code': '289',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/289/problem/A'
+}, {
+  'id': 78,
+  'Name': 'IQ Test',
+  'code': '287',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/287/problem/A'
+}, {
+  'id': 79,
+  'Name': 'Yaroslav and Permutations',
+  'code': '296',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/296/problem/A'
+}, {
+  'id': 80,
+  'Name': 'Snow Footprints',
+  'code': '298',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/298/problem/A'
+}, {
+  'id': 81,
+  'Name': 'Raising Bacteria',
+  'code': '579',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/579/problem/A'
+}, {
+  'id': 82,
+  'Name': 'BowWow and the Timetable',
+  'code': '1204',
+  'level': 'A',
+  'url': 'https://codeforces.com/contest/1204/problem/A'
+}, {
+  'id': 83,
+  'Name': 'The Playboy Chimp',
+  'code': 'UVA 10611',
+  'level': 'A',
+  'url': 'https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1552'
+}, {
+  'id': 84,
+  'Name': 'Pipeline',
+  'code': '287',
+  'level': 'B',
+  'url': 'http://codeforces.com/contest/287/problem/B'
+}, {
+  'id': 85,
+  'Name': 'Burning Midnight Oil',
+  'code': '165',
+  'level': 'B',
+  'url': 'https://codeforces.com/contest/165/problem/B'
+}, {
+  'id': 86,
+  'Name': 'Aggressive cows',
+  'code': 'SPOJ AGGRCOW',
+  'level': 'A',
+  'url': 'http://www.spoj.com/problems/AGGRCOW/'
+}, {
+  'id': 87,
+  'Name': 'Word Capitalization',
+  'code': '281',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/281/problem/A'
+}, {
+  'id': 88,
+  'Name': 'Next Round',
+  'code': '158',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/158/problem/A'
+}, {
+  'id': 89,
+  'Name': 'Young Physicist',
+  'code': '69',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/69/problem/A'
+}, {
+  'id': 90,
+  'Name': 'Bit++',
+  'code': '282',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/282/problem/A'
+}, {
+  'id': 91,
+  'Name': 'Case of the Zeros and Ones',
+  'code': '556',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/556/problem/A'
+}, {
+  'id': 92,
+  'Name': 'Translation',
+  'code': '41',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/41/problem/A'
+}, {
+  'id': 93,
+  'Name': 'String Task',
+  'code': '118',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/118/problem/A'
+}, {
+  'id': 94,
+  'Name': 'Laptops',
+  'code': '456',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/456/problem/A'
+}, {
+  'id': 95,
+  'Name': 'Left-handers, Right-handers and Ambidexters',
+  'code': '950',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/950/problem/A'
+}, {
+  'id': 96,
+  'Name': 'George and Accommodation',
+  'code': '467',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/467/problem/A'
+}, {
+  'id': 97,
+  'Name': 'Vasya the Hipster',
+  'code': '581',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/581/problem/A'
+}, {
+  'id': 98,
+  'Name': 'Fox And Snake',
+  'code': '510',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/510/problem/A'
+}, {
+  'id': 99,
+  'Name': 'The New Year: Meeting Friends',
+  'code': '723',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/723/problem/A'
+}, {
+  'id': 100,
+  'Name': 'Elephant',
+  'code': '617',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/617/problem/A'
+}, {
+  'id': 101,
+  'Name': 'Gregs Workout',
+  'code': '255',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/255/problem/A'
+}, {
+  'id': 102,
+  'Name': 'Ultra-Fast Mathematician',
+  'code': '61',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/61/problem/A'
+}, {
+  'id': 103,
+  'Name': 'Little Pony and Crystal Mine',
+  'code': '454',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/454/problem/A'
+}, {
+  'id': 104,
+  'Name': 'One-dimensional Japanese Crossword',
+  'code': '721',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/721/problem/A'
+}, {
+  'id': 105,
+  'Name': 'Soldier and Bananas',
+  'code': '546',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/546/problem/A'
+}, {
+  'id': 106,
+  'Name': 'Bus to Udayland',
+  'code': '711',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/711/problem/A'
+}, {
+  'id': 107,
+  'Name': 'Cookies',
+  'code': '129',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/129/problem/A'
+}, {
+  'id': 108,
+  'Name': 'Second Order Statistics',
+  'code': '22',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/22/problem/A'
+}, {
+  'id': 109,
+  'Name': 'Nearly Lucky Number',
+  'code': '110',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/110/problem/A'
+}, {
+  'id': 110,
+  'Name': 'Playing with Dice',
+  'code': '378',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/378/problem/A'
+}, {
+  'id': 111,
+  'Name': 'A Good Contest',
+  'code': '681',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/681/problem/A'
+}, {
+  'id': 112,
+  'Name': 'Beautiful Year',
+  'code': '271',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/271/problem/A'
+}, {
+  'id': 113,
+  'Name': 'Far Relative’s Birthday Cake',
+  'code': '629',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/629/problem/A'
+}, {
+  'id': 114,
+  'Name': 'Mashmokh and Lights',
+  'code': '415',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/415/problem/A'
+}, {
+  'id': 115,
+  'Name': 'Triangular numbers',
+  'code': '47',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/47/problem/A'
+}, {
+  'id': 116,
+  'Name': 'Roma and Lucky Numbers',
+  'code': '262',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/262/problem/A'
+}, {
+  'id': 117,
+  'Name': 'Toy Army',
+  'code': '84',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/84/problem/A'
+}, {
+  'id': 118,
+  'Name': 'Levko and Table',
+  'code': '361',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/361/problem/A'
+}, {
+  'id': 119,
+  'Name': 'Cards',
+  'code': '701',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/701/problem/A'
+}, {
+  'id': 120,
+  'Name': 'Wizards Duel',
+  'code': '591',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/591/problem/A'
+}, {
+  'id': 121,
+  'Name': 'Combination Lock',
+  'code': '540',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/540/problem/A'
+}, {
+  'id': 122,
+  'Name': 'Summer Camp',
+  'code': '672',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/672/problem/A'
+}, {
+  'id': 123,
+  'Name': 'Soft Drinking',
+  'code': '151',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/151/problem/A'
+}, {
+  'id': 124,
+  'Name': 'Coder',
+  'code': '384',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/384/problem/A'
+}, {
+  'id': 125,
+  'Name': 'GukiZ and Contest',
+  'code': '551',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/551/problem/A'
+}, {
+  'id': 126,
+  'Name': 'Circle Line',
+  'code': '278',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/278/problem/A'
+}, {
+  'id': 127,
+  'Name': 'Patrick and Shopping',
+  'code': '599',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/599/problem/A'
+}, {
+  'id': 128,
+  'Name': 'Choosing Teams',
+  'code': '432',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/432/problem/A'
+}, {
+  'id': 129,
+  'Name': 'Vanya and Cubes',
+  'code': '492',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/492/problem/A'
+}, {
+  'id': 130,
+  'Name': 'Insomnia cure',
+  'code': '148',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/148/problem/A'
+}, {
+  'id': 131,
+  'Name': 'Cakeminator',
+  'code': '330',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/330/problem/A'
+}, {
+  'id': 132,
+  'Name': 'Flag',
+  'code': '16',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/16/problem/A'
+}, {
+  'id': 133,
+  'Name': 'Cupboards',
+  'code': '248',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/248/problem/A'
+}, {
+  'id': 134,
+  'Name': 'Soroban',
+  'code': '363',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/363/problem/A'
+}, {
+  'id': 135,
+  'Name': 'Amusing Joke',
+  'code': '141',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/141/problem/A'
+}, {
+  'id': 136,
+  'Name': 'Lights Out',
+  'code': '275',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/275/problem/A'
+}, {
+  'id': 137,
+  'Name': 'Lunch Rush',
+  'code': '276',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/276/problem/A'
+}, {
+  'id': 138,
+  'Name': 'Duff and Meat',
+  'code': '588',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/588/problem/A'
+}, {
+  'id': 139,
+  'Name': 'Vanya and Cards',
+  'code': '401',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/401/problem/A'
+}, {
+  'id': 140,
+  'Name': 'Squats',
+  'code': '424',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/424/problem/A'
+}, {
+  'id': 141,
+  'Name': 'Arrival of the General',
+  'code': '144',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/144/problem/A'
+}, {
+  'id': 142,
+  'Name': 'Sinking Ship',
+  'code': '63',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/63/problem/A'
+}, {
+  'id': 143,
+  'Name': 'LLPS',
+  'code': '202',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/202/problem/A'
+}, {
+  'id': 144,
+  'Name': 'Candy Bags',
+  'code': '334',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/334/problem/A'
+}, {
+  'id': 145,
+  'Name': 'Game With Sticks',
+  'code': '451',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/451/problem/A'
+}, {
+  'id': 146,
+  'Name': 'Vasya and Socks',
+  'code': '460',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/460/problem/A'
+}, {
+  'id': 147,
+  'Name': 'Dima and Friends',
+  'code': '272',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/272/problem/A'
+}, {
+  'id': 148,
+  'Name': 'Nicholas and Permutation',
+  'code': '676',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/676/problem/A'
+}, {
+  'id': 149,
+  'Name': 'Toy Cars',
+  'code': '545',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/545/problem/A'
+}, {
+  'id': 150,
+  'Name': 'DZY Loves Hash',
+  'code': '447',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/447/problem/A'
+}, {
+  'id': 151,
+  'Name': 'HQ9+',
+  'code': '133',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/133/problem/A'
+}, {
+  'id': 152,
+  'Name': 'Holidays',
+  'code': '670',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/670/problem/A'
+}, {
+  'id': 153,
+  'Name': 'Dividing Orange',
+  'code': '244',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/244/problem/A'
+}, {
+  'id': 154,
+  'Name': 'Haiku',
+  'code': '78',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/78/problem/A'
+}, {
+  'id': 155,
+  'Name': 'System of Equations',
+  'code': '214',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/214/problem/A'
+}, {
+  'id': 156,
+  'Name': 'IQ test',
+  'code': '25',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/25/problem/A'
+}, {
+  'id': 157,
+  'Name': 'Contest',
+  'code': '501',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/501/problem/A'
+}, {
+  'id': 158,
+  'Name': 'Restoring Password',
+  'code': '94',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/94/problem/A'
+}, {
+  'id': 159,
+  'Name': 'Valera and Plates',
+  'code': '369',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/369/problem/A'
+}, {
+  'id': 160,
+  'Name': 'Minimum Difficulty',
+  'code': '496',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/496/problem/A'
+}, {
+  'id': 161,
+  'Name': 'Little Elephant and Function',
+  'code': '221',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/221/problem/A'
+}, {
+  'id': 162,
+  'Name': 'Collecting Beats is Fun',
+  'code': '373',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/373/problem/A'
+}, {
+  'id': 163,
+  'Name': 'Letter',
+  'code': '14',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/14/problem/A'
+}, {
+  'id': 164,
+  'Name': 'Kefa and First Steps',
+  'code': '580',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/580/problem/A'
+}, {
+  'id': 165,
+  'Name': 'Ilya and Bank Account',
+  'code': '313',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/313/problem/A'
+}, {
+  'id': 166,
+  'Name': 'Uncowed Forces',
+  'code': '604',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/604/problem/A'
+}, {
+  'id': 167,
+  'Name': 'Reconnaissance 2',
+  'code': '34',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/34/problem/A'
+}, {
+  'id': 168,
+  'Name': 'Lucky Ticket',
+  'code': '146',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/146/problem/A'
+}, {
+  'id': 169,
+  'Name': 'Chat room',
+  'code': '58',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/58/problem/A'
+}, {
+  'id': 170,
+  'Name': 'George and Sleep',
+  'code': '387',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/387/problem/A'
+}, {
+  'id': 171,
+  'Name': 'Ostap and Grasshopper',
+  'code': '735',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/735/problem/A'
+}, {
+  'id': 172,
+  'Name': 'The number of positions',
+  'code': '124',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/124/problem/A'
+}, {
+  'id': 173,
+  'Name': 'Table',
+  'code': '359',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/359/problem/A'
+}, {
+  'id': 174,
+  'Name': 'Tavas and Nafas',
+  'code': '535',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/535/problem/A'
+}, {
+  'id': 175,
+  'Name': 'Watermelon',
+  'code': '4',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/4/problem/A'
+}, {
+  'id': 176,
+  'Name': 'Lets Watch Football',
+  'code': '195',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/195/problem/A'
+}, {
+  'id': 177,
+  'Name': 'Initial Bet',
+  'code': '478',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/478/problem/A'
+}, {
+  'id': 178,
+  'Name': 'Saitama Destroys Hotel',
+  'code': '608',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/608/problem/A'
+}, {
+  'id': 179,
+  'Name': 'Queue on Bus Stop',
+  'code': '435',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/435/problem/A'
+}, {
+  'id': 180,
+  'Name': 'Bicycle Chain',
+  'code': '215',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/215/problem/A'
+}, {
+  'id': 181,
+  'Name': 'Little Elephant and Rozdil',
+  'code': '205',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/205/problem/A'
+}, {
+  'id': 182,
+  'Name': 'Amr and Music',
+  'code': '507',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/507/problem/A'
+}, {
+  'id': 183,
+  'Name': 'Marks',
+  'code': '152',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/152/problem/A'
+}, {
+  'id': 184,
+  'Name': 'Postcards and photos',
+  'code': '137',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/137/problem/A'
+}, {
+  'id': 185,
+  'Name': 'Business trip',
+  'code': '149',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/149/problem/A'
+}, {
+  'id': 186,
+  'Name': 'Drazil and Date',
+  'code': '515',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/515/problem/A'
+}, {
+  'id': 187,
+  'Name': 'Multiplication Table',
+  'code': '577',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/577/problem/A'
+}, {
+  'id': 188,
+  'Name': 'Exam',
+  'code': '534',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/534/problem/A'
+}, {
+  'id': 189,
+  'Name': 'Alenas Schedule',
+  'code': '586',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/586/problem/A'
+}, {
+  'id': 190,
+  'Name': 'Interview',
+  'code': '631',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/631/problem/A'
+}, {
+  'id': 191,
+  'Name': 'Lucky Division',
+  'code': '122',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/122/problem/A'
+}, {
+  'id': 192,
+  'Name': 'Appleman and Easy Task',
+  'code': '462',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/462/problem/A'
+}, {
+  'id': 193,
+  'Name': 'Vasya and Digital Root',
+  'code': '355',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/355/problem/A'
+}, {
+  'id': 194,
+  'Name': 'Parallelepiped',
+  'code': '224',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/224/problem/A'
+}, {
+  'id': 195,
+  'Name': 'Group of Students',
+  'code': '357',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/357/problem/A'
+}, {
+  'id': 196,
+  'Name': 'Joysticks',
+  'code': '651',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/651/problem/A'
+}, {
+  'id': 197,
+  'Name': 'Array',
+  'code': '300',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/300/problem/A'
+}, {
+  'id': 198,
+  'Name': 'Round House',
+  'code': '659',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/659/problem/A'
+}, {
+  'id': 199,
+  'Name': 'Lala Land and Apple Trees',
+  'code': '558',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/558/problem/A'
+}, {
+  'id': 200,
+  'Name': 'Autocomplete',
+  'code': '53',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/53/problem/A'
+}, {
+  'id': 201,
+  'Name': 'Digital Counter',
+  'code': '495',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/495/problem/A'
+}, {
+  'id': 202,
+  'Name': 'Vitaliy and Pie',
+  'code': '525',
+  'level': 'A',
+  'url': 'http://codeforces.com/contest/525/problem/A'
+}];
 
 /***/ }),
 
@@ -6386,6 +11652,106 @@ if (document.getElementById('calender')) {
 })));
 //# sourceMappingURL=bootstrap.js.map
 
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/Nav.css":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/Nav.css ***!
+  \***************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".cursor:hover{\n    cursor: pointer;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+// eslint-disable-next-line func-names
+module.exports = function (cssWithMappingToString) {
+  var list = []; // return the list of modules as css string
+
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item);
+
+      if (item[2]) {
+        return "@media ".concat(item[2], " {").concat(content, "}");
+      }
+
+      return content;
+    }).join("");
+  }; // import a list of modules into the list
+  // eslint-disable-next-line func-names
+
+
+  list.i = function (modules, mediaQuery, dedupe) {
+    if (typeof modules === "string") {
+      // eslint-disable-next-line no-param-reassign
+      modules = [[null, modules, ""]];
+    }
+
+    var alreadyImportedModules = {};
+
+    if (dedupe) {
+      for (var i = 0; i < this.length; i++) {
+        // eslint-disable-next-line prefer-destructuring
+        var id = this[i][0];
+
+        if (id != null) {
+          alreadyImportedModules[id] = true;
+        }
+      }
+    }
+
+    for (var _i = 0; _i < modules.length; _i++) {
+      var item = [].concat(modules[_i]);
+
+      if (dedupe && alreadyImportedModules[item[0]]) {
+        // eslint-disable-next-line no-continue
+        continue;
+      }
+
+      if (mediaQuery) {
+        if (!item[2]) {
+          item[2] = mediaQuery;
+        } else {
+          item[2] = "".concat(mediaQuery, " and ").concat(item[2]);
+        }
+      }
+
+      list.push(item);
+    }
+  };
+
+  return list;
+};
 
 /***/ }),
 
@@ -65512,6 +70878,764 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/regenerator-runtime/runtime.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime.js ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var runtime = (function (exports) {
+  "use strict";
+
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var undefined; // More compressible than void 0.
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  function define(obj, key, value) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+    return obj[key];
+  }
+  try {
+    // IE 8 has a broken Object.defineProperty that only works on DOM objects.
+    define({}, "");
+  } catch (err) {
+    define = function(obj, key, value) {
+      return obj[key] = value;
+    };
+  }
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+
+    // The ._invoke method unifies the implementations of the .next,
+    // .throw, and .return methods.
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+
+    return generator;
+  }
+  exports.wrap = wrap;
+
+  // Try/catch helper to minimize deoptimizations. Returns a completion
+  // record like context.tryEntries[i].completion. This interface could
+  // have been (and was previously) designed to take a closure to be
+  // invoked without arguments, but in all the cases we care about we
+  // already have an existing method we want to call, so there's no need
+  // to create a new function object. We can even get away with assuming
+  // the method takes exactly one argument, since that happens to be true
+  // in every case, so we don't have to touch the arguments object. The
+  // only additional allocation required is the completion record, which
+  // has a stable shape and so hopefully should be cheap to allocate.
+  function tryCatch(fn, obj, arg) {
+    try {
+      return { type: "normal", arg: fn.call(obj, arg) };
+    } catch (err) {
+      return { type: "throw", arg: err };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed";
+
+  // Returning this object from the innerFn has the same effect as
+  // breaking out of the dispatch switch statement.
+  var ContinueSentinel = {};
+
+  // Dummy constructor functions that we use as the .constructor and
+  // .constructor.prototype properties for functions that return Generator
+  // objects. For full spec compliance, you may wish to configure your
+  // minifier not to mangle the names of these two functions.
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+
+  // This is a polyfill for %IteratorPrototype% for environments that
+  // don't natively support it.
+  var IteratorPrototype = {};
+  IteratorPrototype[iteratorSymbol] = function () {
+    return this;
+  };
+
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  if (NativeIteratorPrototype &&
+      NativeIteratorPrototype !== Op &&
+      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    // This environment has a native %IteratorPrototype%; use it instead
+    // of the polyfill.
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype =
+    Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
+  GeneratorFunctionPrototype.constructor = GeneratorFunction;
+  GeneratorFunction.displayName = define(
+    GeneratorFunctionPrototype,
+    toStringTagSymbol,
+    "GeneratorFunction"
+  );
+
+  // Helper for defining the .next, .throw, and .return methods of the
+  // Iterator interface in terms of a single ._invoke method.
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function(method) {
+      define(prototype, method, function(arg) {
+        return this._invoke(method, arg);
+      });
+    });
+  }
+
+  exports.isGeneratorFunction = function(genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor
+      ? ctor === GeneratorFunction ||
+        // For the native GeneratorFunction constructor, the best we can
+        // do is to check its .name property.
+        (ctor.displayName || ctor.name) === "GeneratorFunction"
+      : false;
+  };
+
+  exports.mark = function(genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      define(genFun, toStringTagSymbol, "GeneratorFunction");
+    }
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+
+  // Within the body of any async function, `await x` is transformed to
+  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+  // `hasOwn.call(value, "__await")` to determine if the yielded value is
+  // meant to be awaited.
+  exports.awrap = function(arg) {
+    return { __await: arg };
+  };
+
+  function AsyncIterator(generator, PromiseImpl) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+        if (value &&
+            typeof value === "object" &&
+            hasOwn.call(value, "__await")) {
+          return PromiseImpl.resolve(value.__await).then(function(value) {
+            invoke("next", value, resolve, reject);
+          }, function(err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return PromiseImpl.resolve(value).then(function(unwrapped) {
+          // When a yielded Promise is resolved, its final value becomes
+          // the .value of the Promise<{value,done}> result for the
+          // current iteration.
+          result.value = unwrapped;
+          resolve(result);
+        }, function(error) {
+          // If a rejected Promise was yielded, throw the rejection back
+          // into the async generator function so it can be handled there.
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new PromiseImpl(function(resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise =
+        // If enqueue has been called before, then we want to wait until
+        // all previous Promises have been resolved before calling invoke,
+        // so that results are always delivered in the correct order. If
+        // enqueue has not been called before, then it is important to
+        // call invoke immediately, without waiting on a callback to fire,
+        // so that the async generator function has the opportunity to do
+        // any necessary setup in a predictable way. This predictability
+        // is why the Promise constructor synchronously invokes its
+        // executor callback, and why async functions synchronously
+        // execute code before the first await. Since we implement simple
+        // async functions in terms of async generators, it is especially
+        // important to get this right, even though it requires care.
+        previousPromise ? previousPromise.then(
+          callInvokeWithMethodAndArg,
+          // Avoid propagating failures to Promises returned by later
+          // invocations of the iterator.
+          callInvokeWithMethodAndArg
+        ) : callInvokeWithMethodAndArg();
+    }
+
+    // Define the unified helper method that is used to implement .next,
+    // .throw, and .return (see defineIteratorMethods).
+    this._invoke = enqueue;
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
+    return this;
+  };
+  exports.AsyncIterator = AsyncIterator;
+
+  // Note that simple async functions are implemented on top of
+  // AsyncIterator objects; they just return a Promise for the value of
+  // the final result produced by the iterator.
+  exports.async = function(innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+    if (PromiseImpl === void 0) PromiseImpl = Promise;
+
+    var iter = new AsyncIterator(
+      wrap(innerFn, outerFn, self, tryLocsList),
+      PromiseImpl
+    );
+
+    return exports.isGeneratorFunction(outerFn)
+      ? iter // If outerFn is a generator, return the full iterator.
+      : iter.next().then(function(result) {
+          return result.done ? result.value : iter.next();
+        });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        }
+
+        // Be forgiving, per 25.3.3.3.3 of the spec:
+        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          // Setting context._sent for legacy support of Babel's
+          // function.sent implementation.
+          context.sent = context._sent = context.arg;
+
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+
+        var record = tryCatch(innerFn, self, context);
+        if (record.type === "normal") {
+          // If an exception is thrown from innerFn, we leave state ===
+          // GenStateExecuting and loop back for another invocation.
+          state = context.done
+            ? GenStateCompleted
+            : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+
+        } else if (record.type === "throw") {
+          state = GenStateCompleted;
+          // Dispatch the exception by looping back around to the
+          // context.dispatchException(context.arg) call above.
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  }
+
+  // Call delegate.iterator[context.method](context.arg) and handle the
+  // result, either by returning a { value, done } result from the
+  // delegate iterator, or by modifying context.method and context.arg,
+  // setting context.delegate to null, and returning the ContinueSentinel.
+  function maybeInvokeDelegate(delegate, context) {
+    var method = delegate.iterator[context.method];
+    if (method === undefined) {
+      // A .throw or .return when the delegate iterator has no .throw
+      // method always terminates the yield* loop.
+      context.delegate = null;
+
+      if (context.method === "throw") {
+        // Note: ["return"] must be used for ES3 parsing compatibility.
+        if (delegate.iterator["return"]) {
+          // If the delegate iterator has a return method, give it a
+          // chance to clean up.
+          context.method = "return";
+          context.arg = undefined;
+          maybeInvokeDelegate(delegate, context);
+
+          if (context.method === "throw") {
+            // If maybeInvokeDelegate(context) changed context.method from
+            // "return" to "throw", let that override the TypeError below.
+            return ContinueSentinel;
+          }
+        }
+
+        context.method = "throw";
+        context.arg = new TypeError(
+          "The iterator does not provide a 'throw' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (! info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      // Assign the result of the finished delegate to the temporary
+      // variable specified by delegate.resultName (see delegateYield).
+      context[delegate.resultName] = info.value;
+
+      // Resume execution at the desired location (see delegateYield).
+      context.next = delegate.nextLoc;
+
+      // If context.method was "throw" but the delegate handled the
+      // exception, let the outer generator proceed normally. If
+      // context.method was "next", forget context.arg since it has been
+      // "consumed" by the delegate iterator. If context.method was
+      // "return", allow the original .return call to continue in the
+      // outer generator.
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined;
+      }
+
+    } else {
+      // Re-yield the result returned by the delegate method.
+      return info;
+    }
+
+    // The delegate iterator is finished, so forget it and continue with
+    // the outer generator.
+    context.delegate = null;
+    return ContinueSentinel;
+  }
+
+  // Define Generator.prototype.{next,throw,return} in terms of the
+  // unified ._invoke helper method.
+  defineIteratorMethods(Gp);
+
+  define(Gp, toStringTagSymbol, "Generator");
+
+  // A Generator should always return itself as the iterator object when the
+  // @@iterator function is called on it. Some browsers' implementations of the
+  // iterator prototype chain incorrectly implement this, causing the Generator
+  // object to not be returned from this call. This ensures that doesn't happen.
+  // See https://github.com/facebook/regenerator/issues/274 for more details.
+  Gp[iteratorSymbol] = function() {
+    return this;
+  };
+
+  Gp.toString = function() {
+    return "[object Generator]";
+  };
+
+  function pushTryEntry(locs) {
+    var entry = { tryLoc: locs[0] };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    // The root entry object (effectively a try statement without a catch
+    // or a finally block) gives us a place to store values thrown from
+    // locations where there is no enclosing try statement.
+    this.tryEntries = [{ tryLoc: "root" }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  exports.keys = function(object) {
+    var keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    keys.reverse();
+
+    // Rather than returning an object with a next method, we keep
+    // things simple and return the next function itself.
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      }
+
+      // To avoid creating an additional object, we just hang the .value
+      // and .done properties off the next function object itself. This
+      // also ensures that the minifier will not anonymize the function.
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1, next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined;
+          next.done = true;
+
+          return next;
+        };
+
+        return next.next = next;
+      }
+    }
+
+    // Return an iterator with no values.
+    return { next: doneResult };
+  }
+  exports.values = values;
+
+  function doneResult() {
+    return { value: undefined, done: true };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+
+    reset: function(skipTempReset) {
+      this.prev = 0;
+      this.next = 0;
+      // Resetting context._sent for legacy support of Babel's
+      // function.sent implementation.
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+
+      this.method = "next";
+      this.arg = undefined;
+
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          // Not sure about the optimal order of these conditions:
+          if (name.charAt(0) === "t" &&
+              hasOwn.call(this, name) &&
+              !isNaN(+name.slice(1))) {
+            this[name] = undefined;
+          }
+        }
+      }
+    },
+
+    stop: function() {
+      this.done = true;
+
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+
+    dispatchException: function(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          // If the dispatched exception was caught by a catch block,
+          // then let that catch block handle the exception normally.
+          context.method = "next";
+          context.arg = undefined;
+        }
+
+        return !! caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          // Exception thrown outside of any try block that could handle
+          // it, so set the completion value of the entire function to
+          // throw the exception.
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+
+    abrupt: function(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev &&
+            hasOwn.call(entry, "finallyLoc") &&
+            this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry &&
+          (type === "break" ||
+           type === "continue") &&
+          finallyEntry.tryLoc <= arg &&
+          arg <= finallyEntry.finallyLoc) {
+        // Ignore the finally entry if control is not jumping to a
+        // location outside the try/catch block.
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+
+    complete: function(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" ||
+          record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+
+    finish: function(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+
+    "catch": function(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+
+      // The context.catch method must only be called with a location
+      // argument that corresponds to a known catch block.
+      throw new Error("illegal catch attempt");
+    },
+
+    delegateYield: function(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        // Deliberately forget the last sent value so that we don't
+        // accidentally pass it on to the delegate.
+        this.arg = undefined;
+      }
+
+      return ContinueSentinel;
+    }
+  };
+
+  // Regardless of whether this script is executing as a CommonJS module
+  // or not, return the runtime object so that we can declare the variable
+  // regeneratorRuntime in the outer scope, which allows this module to be
+  // injected easily by `bin/regenerator --include-runtime script.js`.
+  return exports;
+
+}(
+  // If this script is executing as a CommonJS module, use module.exports
+  // as the regeneratorRuntime namespace. Otherwise create a new empty
+  // object. Either way, the resulting object will be used to initialize
+  // the regeneratorRuntime variable at the top of this file.
+   true ? module.exports : 0
+));
+
+try {
+  regeneratorRuntime = runtime;
+} catch (accidentalStrictMode) {
+  // This module should not be running in strict mode, so the above
+  // assignment should always work unless something is misconfigured. Just
+  // in case runtime.js accidentally runs in strict mode, we can escape
+  // strict mode using a global Function call. This could conceivably fail
+  // if a Content Security Policy forbids using Function, but in that case
+  // the proper solution is to fix the accidental strict mode problem. If
+  // you've misconfigured your bundler to force strict mode and applied a
+  // CSP to forbid Function, and you're not willing to fix either of those
+  // problems, please detail your unique predicament in a GitHub issue.
+  Function("r", "regeneratorRuntime = r")(runtime);
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/scheduler/cjs/scheduler-tracing.development.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/scheduler/cjs/scheduler-tracing.development.js ***!
@@ -66771,13 +72895,322 @@ if (false) {} else {
 }
 
 
+/***/ }),
+
+/***/ "./resources/js/components/Nav.css":
+/*!*****************************************!*\
+  !*** ./resources/js/components/Nav.css ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Nav_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./Nav.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/components/Nav.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Nav_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_Nav_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \****************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+var isOldIE = function isOldIE() {
+  var memo;
+  return function memorize() {
+    if (typeof memo === 'undefined') {
+      // Test for IE <= 9 as proposed by Browserhacks
+      // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+      // Tests for existence of standard globals is to allow style-loader
+      // to operate correctly into non-standard environments
+      // @see https://github.com/webpack-contrib/style-loader/issues/177
+      memo = Boolean(window && document && document.all && !window.atob);
+    }
+
+    return memo;
+  };
+}();
+
+var getTarget = function getTarget() {
+  var memo = {};
+  return function memorize(target) {
+    if (typeof memo[target] === 'undefined') {
+      var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
+
+      if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+        try {
+          // This will throw an exception if access to iframe is blocked
+          // due to cross-origin restrictions
+          styleTarget = styleTarget.contentDocument.head;
+        } catch (e) {
+          // istanbul ignore next
+          styleTarget = null;
+        }
+      }
+
+      memo[target] = styleTarget;
+    }
+
+    return memo[target];
+  };
+}();
+
+var stylesInDom = [];
+
+function getIndexByIdentifier(identifier) {
+  var result = -1;
+
+  for (var i = 0; i < stylesInDom.length; i++) {
+    if (stylesInDom[i].identifier === identifier) {
+      result = i;
+      break;
+    }
+  }
+
+  return result;
+}
+
+function modulesToDom(list, options) {
+  var idCountMap = {};
+  var identifiers = [];
+
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = options.base ? item[0] + options.base : item[0];
+    var count = idCountMap[id] || 0;
+    var identifier = "".concat(id, " ").concat(count);
+    idCountMap[id] = count + 1;
+    var index = getIndexByIdentifier(identifier);
+    var obj = {
+      css: item[1],
+      media: item[2],
+      sourceMap: item[3]
+    };
+
+    if (index !== -1) {
+      stylesInDom[index].references++;
+      stylesInDom[index].updater(obj);
+    } else {
+      stylesInDom.push({
+        identifier: identifier,
+        updater: addStyle(obj, options),
+        references: 1
+      });
+    }
+
+    identifiers.push(identifier);
+  }
+
+  return identifiers;
+}
+
+function insertStyleElement(options) {
+  var style = document.createElement('style');
+  var attributes = options.attributes || {};
+
+  if (typeof attributes.nonce === 'undefined') {
+    var nonce =  true ? __webpack_require__.nc : 0;
+
+    if (nonce) {
+      attributes.nonce = nonce;
+    }
+  }
+
+  Object.keys(attributes).forEach(function (key) {
+    style.setAttribute(key, attributes[key]);
+  });
+
+  if (typeof options.insert === 'function') {
+    options.insert(style);
+  } else {
+    var target = getTarget(options.insert || 'head');
+
+    if (!target) {
+      throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
+    }
+
+    target.appendChild(style);
+  }
+
+  return style;
+}
+
+function removeStyleElement(style) {
+  // istanbul ignore if
+  if (style.parentNode === null) {
+    return false;
+  }
+
+  style.parentNode.removeChild(style);
+}
+/* istanbul ignore next  */
+
+
+var replaceText = function replaceText() {
+  var textStore = [];
+  return function replace(index, replacement) {
+    textStore[index] = replacement;
+    return textStore.filter(Boolean).join('\n');
+  };
+}();
+
+function applyToSingletonTag(style, index, remove, obj) {
+  var css = remove ? '' : obj.media ? "@media ".concat(obj.media, " {").concat(obj.css, "}") : obj.css; // For old IE
+
+  /* istanbul ignore if  */
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = replaceText(index, css);
+  } else {
+    var cssNode = document.createTextNode(css);
+    var childNodes = style.childNodes;
+
+    if (childNodes[index]) {
+      style.removeChild(childNodes[index]);
+    }
+
+    if (childNodes.length) {
+      style.insertBefore(cssNode, childNodes[index]);
+    } else {
+      style.appendChild(cssNode);
+    }
+  }
+}
+
+function applyToTag(style, options, obj) {
+  var css = obj.css;
+  var media = obj.media;
+  var sourceMap = obj.sourceMap;
+
+  if (media) {
+    style.setAttribute('media', media);
+  } else {
+    style.removeAttribute('media');
+  }
+
+  if (sourceMap && typeof btoa !== 'undefined') {
+    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
+  } // For old IE
+
+  /* istanbul ignore if  */
+
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    while (style.firstChild) {
+      style.removeChild(style.firstChild);
+    }
+
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var singleton = null;
+var singletonCounter = 0;
+
+function addStyle(obj, options) {
+  var style;
+  var update;
+  var remove;
+
+  if (options.singleton) {
+    var styleIndex = singletonCounter++;
+    style = singleton || (singleton = insertStyleElement(options));
+    update = applyToSingletonTag.bind(null, style, styleIndex, false);
+    remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+  } else {
+    style = insertStyleElement(options);
+    update = applyToTag.bind(null, style, options);
+
+    remove = function remove() {
+      removeStyleElement(style);
+    };
+  }
+
+  update(obj);
+  return function updateStyle(newObj) {
+    if (newObj) {
+      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {
+        return;
+      }
+
+      update(obj = newObj);
+    } else {
+      remove();
+    }
+  };
+}
+
+module.exports = function (list, options) {
+  options = options || {}; // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+  // tags it will allow on a page
+
+  if (!options.singleton && typeof options.singleton !== 'boolean') {
+    options.singleton = isOldIE();
+  }
+
+  list = list || [];
+  var lastIdentifiers = modulesToDom(list, options);
+  return function update(newList) {
+    newList = newList || [];
+
+    if (Object.prototype.toString.call(newList) !== '[object Array]') {
+      return;
+    }
+
+    for (var i = 0; i < lastIdentifiers.length; i++) {
+      var identifier = lastIdentifiers[i];
+      var index = getIndexByIdentifier(identifier);
+      stylesInDom[index].references--;
+    }
+
+    var newLastIdentifiers = modulesToDom(newList, options);
+
+    for (var _i = 0; _i < lastIdentifiers.length; _i++) {
+      var _identifier = lastIdentifiers[_i];
+
+      var _index = getIndexByIdentifier(_identifier);
+
+      if (stylesInDom[_index].references === 0) {
+        stylesInDom[_index].updater();
+
+        stylesInDom.splice(_index, 1);
+      }
+    }
+
+    lastIdentifiers = newLastIdentifiers;
+  };
+};
+
 /***/ })
 
 /******/ 	});
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/
+/******/ 	
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -66791,20 +73224,20 @@ if (false) {} else {
 /******/ 			loaded: false,
 /******/ 			exports: {}
 /******/ 		};
-/******/
+/******/ 	
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
+/******/ 	
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
-/******/
+/******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/
+/******/ 	
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = __webpack_modules__;
-/******/
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/chunk loaded */
 /******/ 	(() => {
@@ -66836,7 +73269,19 @@ if (false) {} else {
 /******/ 			return result;
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -66848,7 +73293,7 @@ if (false) {} else {
 /******/ 			}
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
 /******/ 		__webpack_require__.g = (function() {
@@ -66860,12 +73305,12 @@ if (false) {} else {
 /******/ 			}
 /******/ 		})();
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -66876,7 +73321,7 @@ if (false) {} else {
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/node module decorator */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nmd = (module) => {
@@ -66885,11 +73330,11 @@ if (false) {} else {
 /******/ 			return module;
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
 /******/ 	(() => {
 /******/ 		// no baseURI
-/******/
+/******/ 		
 /******/ 		// object to store loaded and loading chunks
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
@@ -66897,19 +73342,19 @@ if (false) {} else {
 /******/ 			"/js/app": 0,
 /******/ 			"css/app": 0
 /******/ 		};
-/******/
+/******/ 		
 /******/ 		// no chunk on demand loading
-/******/
+/******/ 		
 /******/ 		// no prefetching
-/******/
+/******/ 		
 /******/ 		// no preloaded
-/******/
+/******/ 		
 /******/ 		// no HMR
-/******/
+/******/ 		
 /******/ 		// no HMR manifest
-/******/
+/******/ 		
 /******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
-/******/
+/******/ 		
 /******/ 		// install a JSONP callback for chunk loading
 /******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
 /******/ 			var [chunkIds, moreModules, runtime] = data;
@@ -66932,20 +73377,20 @@ if (false) {} else {
 /******/ 			}
 /******/ 			__webpack_require__.O();
 /******/ 		}
-/******/
+/******/ 		
 /******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
-/******/
+/******/ 	
 /************************************************************************/
-/******/
+/******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
-/******/
+/******/ 	
 /******/ })()
 ;

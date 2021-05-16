@@ -1,4 +1,5 @@
 /* stopwatch.js Start */
+
 (function () {
     /*
       polyfills for IE8
@@ -232,9 +233,12 @@
         */
         this.start = function () {
             running = true;
+            this.startTime = Date.now();
             this.interval = setInterval(function () {
                 incrementByTenMilliseconds();
             }, 10);
+
+
         };
 
         /*
@@ -258,13 +262,14 @@
         }
 
         this.addLap = function () {
-
             if (laps.length <= 3) {
+
                 var previousLap = laps[laps.length - 1];
                 var currentLap = new Lap(netTime, previousLap);
                 laps.push(currentLap);
                 let element = document.getElementById(list[laps.length - 1]['id'])
-                element.value = (currentLap.netTime / 60000).toFixed(2);
+                element.value = (currentLap.netTime / 6000).toFixed(2);
+                this.startTime = Date.now();
                 resetLapButton.innerHTML = list[laps.length]['name'];
             }
             if (laps.length === 4) {
@@ -371,7 +376,7 @@ var resetLapButtonEvent = function () {
     }
 }
 const reset_form = () => {
-    for (let i in [1,2,3]) {
+    for (let i in [1, 2, 3]) {
         let element = document.getElementById(list[i]['id'])
         console.log('pressed')
         element.value = '1.2'
@@ -386,6 +391,6 @@ if (!document.addEventListener) {
 } else {
     startStopButton.addEventListener("click", startStopButtonEvent);
     resetLapButton.addEventListener('click', resetLapButtonEvent);
-
-
 }
+var x = document.getElementById("myAudio").loop = true;
+x.play();

@@ -79,13 +79,12 @@
             </div>
         </div>
         <div class="form-group row">
-            <label for="readingTime" class="col-md-4 col-form-label text-white  text-md-right"><b>Reading
-                    Time(m)</b></label>
+            <label for="readingTime" class="col-md-4 col-form-label text-white  text-md-right"><b>Reading Time(m)</b></label>
 
             <div class="col-md-6">
-                <input step="0.0    1" id="readingTime" type="number"
-                       class="form-control @error('readingTime') is-invalid @enderror" name="readingTime"
-                       value="{{ old('readingTime') ?? $problem['readingTime'] }}" required autocomplete="readingTime"
+                <input id="readingTime"
+                       class="form-control" name="readingTime"
+                       value="{{ old('readingTime') ?? $problem['readingTime'] }}" required
                        autofocus>
 
                 @error('readingTime')
@@ -98,7 +97,7 @@
         <div class="form-group row">
             <label for="thinkingTime" class="col-md-4 col-form-label text-white  text-md-right"><b>Thinking Time(m)</b></label>
 
-            <div step="0.01" class="col-md-6">
+            <div class="col-md-6">
                 <input id="thinkingTime" type="number"
                        class="form-control @error('thinkingTime') is-invalid @enderror" name="thinkingTime"
                        value="{{ old('thinkingTime') ?? $problem['thinkingTime'] }}" required
@@ -117,7 +116,7 @@
                     Time(m)</b></label>
 
             <div class="col-md-6">
-                <input step="0.01" id="codingTime" type="number"
+                <input id="codingTime" type="number"
                        class="form-control @error('codingTime') is-invalid @enderror" name="codingTime"
                        value="{{ old('codingTime') ?? $problem['codingTime'] }}" required autocomplete="codingTime"
                        autofocus>
@@ -135,7 +134,7 @@
                     Time(m)</b></label>
 
             <div class="col-md-6">
-                <input step="0.01" id="debugTime" type="number"
+                <input id="debugTime" type="number"
                        class="form-control @error('debugTime') is-invalid @enderror" name="debugTime"
                        value="{{ old('debugTime') ?? $problem['debugTime'] }}" required autocomplete="debugTime"
                        autofocus>
@@ -158,16 +157,16 @@
                 <select name="problemLevel" value="{{ old('problemLevel') ?? $problem['problemLevel'] }}"
                         class="form-control" @error('problemLevel') is-invalid
                         @enderror id="problemLevel">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
+                    <option @if($problem['problemLevel'] == 1) selected @endif>1</option>
+                    <option @if($problem['problemLevel'] == 2) selected @endif>2</option>
+                    <option @if($problem['problemLevel'] == 3) selected @endif>3</option>
+                    <option @if($problem['problemLevel'] == 4) selected @endif>4</option>
+                    <option @if($problem['problemLevel'] == 5) selected @endif>5</option>
+                    <option @if($problem['problemLevel'] == 6) selected @endif>6</option>
+                    <option @if($problem['problemLevel'] == 7) selected @endif>7</option>
+                    <option @if($problem['problemLevel'] == 8) selected @endif>8</option>
+                    <option @if($problem['problemLevel'] == 9) selected @endif>9</option>
+                    <option @if($problem['problemLevel'] == 10) selected @endif>10</option>
 
                 </select>
 
@@ -202,10 +201,50 @@
 
 
         <div class="form-group row">
+            <label for="code"
+                   class="col-md-4 col-form-label text-white  text-md-right"><b>Contest Code</b></label>
+
+            <div class="col-md-6">
+                <input id="code" type="text"
+                       class="form-control @error('code') is-invalid @enderror" name="code"
+                       value="{{ old('code') ?? $problem['code'] }}" autocomplete="code" autofocus>
+
+                @error('code')
+                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                @enderror
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="codeForcesLevel" class="col-md-4 col-form-label text-white  text-md-right"><b>Problem Class</b></label>
+
+            <div class="col-md-6">
+                <select name="codeForcesLevel" value="{{ old('codeForcesLevel') }}" class="form-control"
+                        @error('codeForcesLevel') is-invalid
+                        @enderror id="codeForcesLevel">
+                    <option @if($problem['codeForcesLevel' == 'A']) selected @endif>A</option>
+                    <option @if($problem['codeForcesLevel' == 'B']) selected @endif>B</option>
+                    <option @if($problem['codeForcesLevel' == 'C']) selected @endif>C</option>
+                    <option @if($problem['codeForcesLevel' == 'D']) selected @endif>D</option>
+                    <option @if($problem['codeForcesLevel' == 'E']) selected @endif>E</option>
+                    <option @if($problem['codeForcesLevel' == 'F']) selected @endif>F</option>
+                </select>
+
+                @error('codeForcesLevel')
+                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                @enderror
+            </div>
+        </div>
+
+
+        <div class="form-group row">
             <label for="Category" class="col-md-4 col-form-label text-white  text-md-right"><b>Category</b></label>
 
             <div class="col-md-6">
-                <input step="0.01" id="Category" type="text"
+                <input id="Category" type="text"
                        class="form-control @error('Category') is-invalid @enderror" name="Category"
                        value="{{ old('Category') ?? $problem['Category'] }}" required autocomplete="Category" autofocus>
 
@@ -220,7 +259,7 @@
             <label for="url" class="col-md-4 col-form-label text-white  text-md-right"><b>URL</b></label>
 
             <div class="col-md-6">
-                <input step="0.01" id="url" type="text"
+                <input id="url" type="text"
                        class="form-control @error('url') is-invalid @enderror" name="url"
                        value="{{ old('url') ?? $problem['url'] }}" required autocomplete="url" autofocus>
 

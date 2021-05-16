@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Problem;
+use Faker\Provider\DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
@@ -30,11 +31,17 @@ class ProblemController extends Controller
 
     function home()
     {
-        $problems = auth()->user()->problems();
+        $problems = auth()->user()->problems;
+        $user = auth()->user();
         $total_problems = $problems->count();
+        $dateToday = strtotime(date('y-m-d'));
+        $first_problem = $problems->first()->created_at ?? '-';
+
+        $difference = ceil(abs($dateToday - strtotime($user->created_at)) / 86400);
         $date = str_replace('/', '-', date("Y/m/d"));
         $today_problems_class = $problems->where('solvedOn', $date);
         $today_problems = $today_problems_class->count();
+        $average_problems_per_day = (int)round($problems->count() / $difference);
         $accepted = $problems->where('Status', 'Accepted')->count();
         $accepted_today = $today_problems_class->where('Status', 'Accepted')->count();
 //        dd($today_problems_class);
@@ -49,7 +56,7 @@ class ProblemController extends Controller
         $average_Debug_Time = GetAverage('debugTime', $problems,);
 
 
-        return view('home', compact('average_Total_Time', 'average_Reading_Time', 'average_Thinking_Time', 'average_Coding_Time', 'average_Debug_Time', 'total_problems', 'today_problems', 'accepted', 'accepted_today', 'average_problem_level', 'completed_byYourself', 'completed_byYourselfToday'));
+        return view('home', compact('average_problems_per_day', 'difference', 'first_problem', 'user', 'average_Total_Time', 'average_Reading_Time', 'average_Thinking_Time', 'average_Coding_Time', 'average_Debug_Time', 'total_problems', 'today_problems', 'accepted', 'accepted_today', 'average_problem_level', 'completed_byYourself', 'completed_byYourselfToday'));
     }
 
     function calender()
@@ -69,12 +76,11 @@ class ProblemController extends Controller
 
     function create()
     {
-        return view('problem.create');
+        return view('problem.create1');
     }
 
     public function store(Request $request)
     {
-
 
         $data = $request->validate([
             'name' => 'required',
@@ -88,7 +94,9 @@ class ProblemController extends Controller
             'problemLevel' => ['required'],
             'byYourself' => ['required', 'string'],
             'Category' => '',
-            'url' => ['required', 'url']
+            'url' => ['required', 'url'],
+            'code' => '',
+            'codeForcesLevel' => 'required',
 
         ]);
         $totalTime = $data['readingTime'] + $data['thinkingTime'] + $data['codingTime'] + $data['debugTime'];
@@ -140,7 +148,9 @@ class ProblemController extends Controller
             'problemLevel' => ['required'],
             'byYourself' => ['required', 'string'],
             'Category' => '',
-            'url' => ['required', 'url']
+            'url' => ['required', 'url'],
+            'code' => '',
+            'codeForcesLevel' => 'required',
 
         ]);
         auth()->user()->problems()->where('id', $problem->id)->update($data);
@@ -152,5 +162,6 @@ class ProblemController extends Controller
         $problem->delete();
         return Redirect::back();
     }
+
 
 }

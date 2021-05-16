@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+    <audio id="myAudio">
+        <source src="audio.mpg" type="audio/mpeg">
+    </audio>
     <link href="{{ asset('css/stopwatch.css') }}" rel="stylesheet">
 
     <script src="{{ asset('js/stopwatch.js') }}" defer></script>
@@ -91,10 +94,9 @@
                                     Time(m)</b></label>
 
                             <div class="col-md-6">
-                                <input step="0.0    1" id="readingTime" type="number"
-                                       class="form-control @error('readingTime') is-invalid @enderror"
-                                       name="readingTime"
-                                       value="{{ old('readingTime') }}" required autocomplete="readingTime"
+                                <input id="readingTime"
+                                       class="form-control" name="readingTime"
+                                       value="{{ old('readingTime') }}" required
                                        autofocus>
 
                                 @error('readingTime')
@@ -109,7 +111,7 @@
                                     Time(m)</b></label>
 
                             <div step="0.01" class="col-md-6">
-                                <input id="thinkingTime" type="number"
+                                <input id="thinkingTime"
                                        class="form-control @error('thinkingTime') is-invalid @enderror"
                                        name="thinkingTime"
                                        value="{{ old('thinkingTime') }}" required autocomplete="thinkingTime"
@@ -128,7 +130,7 @@
                                     Time(m)</b></label>
 
                             <div class="col-md-6">
-                                <input step="0.01" id="codingTime" type="number"
+                                <input step="0.01" id="codingTime"
                                        class="form-control @error('codingTime') is-invalid @enderror"
                                        name="codingTime"
                                        value="{{ old('codingTime') }}" required autocomplete="codingTime" autofocus>
@@ -146,7 +148,7 @@
                                     Time(m)</b></label>
 
                             <div class="col-md-6">
-                                <input step="0.01" id="debugTime" type="number"
+                                <input step="0.01" id="debugTime"
                                        class="form-control @error('debugTime') is-invalid @enderror"
                                        name="debugTime"
                                        value="{{ old('debugTime') }}" required autocomplete="debugTime" autofocus>
@@ -227,6 +229,33 @@
                                 @enderror
                             </div>
                         </div>
+
+                        
+                        <div class="form-group row">
+                            <label for="codeForcesLevel" class="col-md-4 col-form-label text-white  text-md-right"><b>Problem
+                                    Class</b></label>
+
+                            <div class="col-md-6">
+                                <select name="codeForcesLevel" value="{{ old('codeForcesLevel') }}" class="form-control"
+                                        @error('codeForcesLevel') is-invalid
+                                        @enderror id="codeForcesLevel">
+                                    <option>A</option>
+                                    <option>B</option>
+                                    <option>C</option>
+                                    <option>D</option>
+                                    <option>E</option>
+                                    <option>F</option>
+                                </select>
+
+                                @error('codeForcesLevel')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+
                         <div class="form-group row">
                             <label for="url"
                                    class="col-md-4 col-form-label text-white  text-md-right"><b>URL</b></label>
@@ -242,6 +271,43 @@
                                     </span>
                                 @enderror
                             </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="code"
+                                   class="col-md-4 col-form-label text-white  text-md-right"><b>Contest Code</b></label>
+
+                            <div class="col-md-6">
+                                <input step="0.01" id="code" type="text"
+                                       class="form-control @error('code') is-invalid @enderror" name="code"
+                                       value="{{ old('code') }}" autocomplete="code" autofocus>
+
+                                @error('code')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <button onclick="
+
+
+                                function isNumeric(str) {
+                                    if (typeof str != 'string'){
+                                        return false
+                                    }
+                                    return !isNaN(str) && !isNaN(parseFloat(str))
+                                }
+                                let item = document.getElementById('code')
+                                let url =  document.getElementById('url').value
+                                let code = '';
+                                for(let i = 0; i < url.length;i++){
+                                    if(isNumeric(url[i])){
+                                        code+= url[i]
+                                    }
+                                }
+                                item.value = code
+                                " class="btn btn-primary">
+                                Add From Url
+                            </button>
                         </div>
 
                         <div class="">
@@ -259,9 +325,8 @@
                 </div>
             </div>
 
-            <div class="col-2 ">
+            <div class="col-4 ">
                 <div class="wrapper">
-
                     <div id="watch-dial" class="tile">00:00:00:00</div>
                     <div class="d-flex justify-content-between">
                         <button id="start-stop" style="width: 90px" class="tile action-button start-button">Start
@@ -273,15 +338,18 @@
                                 element.value = ''
                             } )
 
-" style="width: 90px" class="tile action-button reset-button">Form Reset
+                            " style="width: 90px" class="tile action-button reset-button">Form Reset
                         </button>
                         <button id="reset-lap" style="width: 90px" class="tile action-button reset-button">Reset
                         </button>
                     </div>
                     <ul id="laps">
                     </ul>
+
                 </div>
+
             </div>
+
         </div>
     </div>
 @endsection
