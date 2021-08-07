@@ -230,7 +230,7 @@
                             </div>
                         </div>
 
-                        
+
                         <div class="form-group row">
                             <label for="codeForcesLevel" class="col-md-4 col-form-label text-white  text-md-right"><b>Problem
                                     Class</b></label>
@@ -353,4 +353,3 @@
         </div>
     </div>
 @endsection
-
